@@ -1,0 +1,952 @@
+/* Hostbollen CSS - MAGISK TURNERINGSSIDA */
+
+/* Body bakgrund */
+body {
+  background: linear-gradient(135deg, #073763 0%, #0B4A83 50%, #4A90C2 100%);
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+}
+
+/* Main container */
+.hostbollen-main {
+  min-height: calc(100vh - 64px);
+  background: linear-gradient(135deg, #073763 0%, #0B4A83 50%, #4A90C2 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hero Section */
+.tournament-hero {
+  position: relative;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(255,255,255,0.05) 0%, transparent 50%);
+}
+
+/* Flytande tennisbollar */
+.floating-balls {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.ball {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.3;
+  animation: float 8s ease-in-out infinite;
+}
+
+.ball-1 { top: 10%; left: 10%; animation-delay: 0s; }
+.ball-2 { top: 20%; right: 15%; animation-delay: 1.5s; }
+.ball-3 { bottom: 20%; left: 20%; animation-delay: 3s; }
+.ball-4 { bottom: 30%; right: 25%; animation-delay: 4.5s; }
+.ball-5 { top: 60%; left: 50%; animation-delay: 6s; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-20px) rotate(90deg); }
+  50% { transform: translateY(-10px) rotate(180deg); }
+  75% { transform: translateY(-25px) rotate(270deg); }
+}
+
+/* Hero Content */
+.hero-content {
+  text-align: center;
+  color: white;
+  z-index: 2;
+  position: relative;
+}
+
+.tournament-badge {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 25px;
+  padding: 0.8rem 2rem;
+  margin-bottom: 2rem;
+  display: inline-block;
+  backdrop-filter: blur(10px);
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.badge-text {
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,255,255,0.4); }
+  50% { transform: scale(1.05); box-shadow: 0 0 20px 10px rgba(255,255,255,0.1); }
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 900;
+  margin: 0 0 2rem 0;
+  text-shadow: 4px 4px 8px rgba(0,0,0,0.3);
+  line-height: 0.9;
+}
+
+.title-line-1 {
+  display: block;
+  font-size: 3rem;
+  opacity: 0.9;
+}
+
+.title-line-2 {
+  display: block;
+  font-size: 5rem;
+  background: linear-gradient(45deg, #ffeb3b, #ff9800, #f44336);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { filter: hue-rotate(0deg); }
+  50% { filter: hue-rotate(45deg); }
+}
+
+/* Tournament Date */
+.tournament-date {
+  margin-bottom: 2rem;
+}
+
+.date-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 1.5rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.calendar-icon {
+  font-size: 2.5rem;
+}
+
+.date-info {
+  text-align: left;
+}
+
+.date-main {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.date-day {
+  font-size: 1rem;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Tournament Status */
+.tournament-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.status-text {
+  background: linear-gradient(135deg, #4caf50, #2e7d32);
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+}
+
+.pulse-indicator {
+  width: 20px;
+  height: 20px;
+  background: #4caf50;
+  border-radius: 50%;
+  animation: pulseGreen 2s ease-in-out infinite;
+}
+
+@keyframes pulseGreen {
+  0%, 100% { 
+    transform: scale(1); 
+    box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7); 
+  }
+  50% { 
+    transform: scale(1.2); 
+    box-shadow: 0 0 0 10px rgba(76, 175, 80, 0); 
+  }
+}
+
+/* Huvudcontainer */
+.hostbollen-container {
+  max-width: 1000px;
+  margin: -10vh auto 0;
+  padding: 2rem;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  z-index: 3;
+}
+
+/* Tournament Overview */
+.tournament-overview {
+  margin-bottom: 3rem;
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.info-card {
+  background: linear-gradient(135deg, rgba(74,144,194,0.1), rgba(7,55,99,0.05));
+  border: 1px solid rgba(74, 144, 194, 0.2);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.info-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(74,144,194,0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.info-card:hover::before {
+  left: 100%;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(74, 144, 194, 0.3);
+  border-color: #4A90C2;
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
+  filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.1));
+}
+
+.info-card h3 {
+  color: #073763;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+}
+
+.info-card p {
+  color: #666;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Content Sections */
+.content-section {
+  margin-bottom: 3rem;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(74, 144, 194, 0.1);
+}
+
+.content-section.highlight-section {
+  background: linear-gradient(135deg, rgba(255, 193, 7, 0.05), rgba(255, 152, 0, 0.02));
+  border: 2px solid rgba(255, 193, 7, 0.3);
+  box-shadow: 0 4px 25px rgba(255, 193, 7, 0.2);
+}
+
+.section-header {
+  background: linear-gradient(135deg, #4A90C2, #073763);
+  color: white;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
+  animation: headerShimmer 4s ease-in-out infinite;
+}
+
+@keyframes headerShimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.section-icon {
+  font-size: 1.8rem;
+  filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
+}
+
+.section-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  flex: 1;
+}
+
+.deadline-badge {
+  background: rgba(255, 193, 7, 0.2);
+  border: 1px solid rgba(255, 193, 7, 0.5);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.section-content {
+  padding: 2rem;
+}
+
+/* Highlight Box */
+.highlight-box {
+  background: linear-gradient(135deg, rgba(74,144,194,0.1), rgba(7,55,99,0.05));
+  border-left: 4px solid #4A90C2;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.highlight-box p {
+  margin: 0;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Info Grid */
+.info-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.info-item {
+  background: rgba(74, 144, 194, 0.05);
+  border: 1px solid rgba(74, 144, 194, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.info-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 15px rgba(74, 144, 194, 0.2);
+}
+
+.info-title {
+  font-weight: 700;
+  color: #073763;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.info-desc {
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Rules List */
+.rules-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.rule-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: rgba(74, 144, 194, 0.05);
+  border: 1px solid rgba(74, 144, 194, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.rule-item:hover {
+  background: rgba(74, 144, 194, 0.1);
+  transform: translateX(5px);
+}
+
+.rule-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.rule-item p {
+  margin: 0;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Important Notice */
+.important-notice {
+  background: linear-gradient(135deg, rgba(255, 193, 7, 0.15), rgba(255, 152, 0, 0.1));
+  border: 1px solid rgba(255, 193, 7, 0.4);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.notice-icon {
+  font-size: 2rem;
+  color: #f57c00;
+  flex-shrink: 0;
+}
+
+.important-notice p {
+  margin: 0;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Registration Steps */
+.registration-steps {
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.step-card {
+  display: flex;
+  gap: 1.5rem;
+  background: rgba(74, 144, 194, 0.05);
+  border: 1px solid rgba(74, 144, 194, 0.2);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.step-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(74,144,194,0.1), transparent);
+  transition: left 0.8s ease;
+}
+
+.step-card:hover::before {
+  left: 100%;
+}
+
+.step-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(74, 144, 194, 0.2);
+  border-color: #4A90C2;
+}
+
+.step-number {
+  background: linear-gradient(135deg, #4A90C2, #073763);
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  box-shadow: 0 4px 15px rgba(74, 144, 194, 0.3);
+}
+
+.step-content {
+  flex: 1;
+}
+
+.step-content h4 {
+  margin: 0 0 1rem 0;
+  color: #073763;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.step-content p {
+  margin: 0 0 1rem 0;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Swish Info */
+.swish-info {
+  background: linear-gradient(135deg, rgba(0, 188, 212, 0.1), rgba(77, 208, 225, 0.05));
+  border: 1px solid rgba(0, 188, 212, 0.3);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 1rem;
+}
+
+.swish-number {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #00796b;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 2px;
+}
+
+.swish-desc {
+  text-align: center;
+  color: #004d40;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.swish-note {
+  text-align: center;
+  color: #00695c;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+/* Website Link */
+.website-link {
+  margin: 1.5rem 0;
+}
+
+.registration-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: linear-gradient(135deg, #4A90C2, #073763);
+  color: white;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 15px rgba(74, 144, 194, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.registration-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.6s ease;
+}
+
+.registration-button:hover::before {
+  left: 100%;
+}
+
+.registration-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(74, 144, 194, 0.4);
+  color: white;
+  text-decoration: none;
+}
+
+.button-icon {
+  font-size: 1.2rem;
+}
+
+.button-arrow {
+  font-size: 1.3rem;
+  transition: transform 0.3s ease;
+}
+
+.registration-button:hover .button-arrow {
+  transform: translateX(5px);
+}
+
+.step-note {
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: 1rem !important;
+}
+
+/* Binding Notice */
+.binding-notice {
+  background: rgba(244, 67, 54, 0.05);
+  border: 1px solid rgba(244, 67, 54, 0.2);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.binding-notice p {
+  margin: 0;
+  color: #d32f2f;
+  font-weight: 600;
+}
+
+/* Cost Info */
+.cost-info {
+  margin-bottom: 2rem;
+}
+
+.cost-card {
+  background: linear-gradient(135deg, rgba(76, 175, 80, 0.1), rgba(129, 199, 132, 0.05));
+  border: 2px solid rgba(76, 175, 80, 0.3);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cost-card::before {
+  content: '💰';
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 2rem;
+  opacity: 0.3;
+}
+
+.cost-amount {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #2e7d32;
+  margin-bottom: 1rem;
+}
+
+.cost-includes p {
+  margin: 0.5rem 0;
+  color: #1b5e20;
+  font-weight: 600;
+}
+
+/* Contact Info */
+.contact-info {
+  background: rgba(33, 150, 243, 0.05);
+  border: 1px solid rgba(33, 150, 243, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.contact-info h4 {
+  color: #1976d2;
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+  color: #333;
+  line-height: 1.5;
+}
+
+.inline-link {
+  color: #1976d2;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.3s ease;
+}
+
+.inline-link:hover {
+  border-bottom-color: #1976d2;
+}
+
+/* Prize Info */
+.prize-info {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(255, 193, 7, 0.1), rgba(255, 152, 0, 0.05));
+  border-radius: 12px;
+}
+
+.trophy-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  display: block;
+  filter: drop-shadow(4px 4px 8px rgba(0,0,0,0.2));
+  animation: trophyGlow 3s ease-in-out infinite;
+}
+
+@keyframes trophyGlow {
+  0%, 100% { filter: drop-shadow(4px 4px 8px rgba(0,0,0,0.2)); }
+  50% { filter: drop-shadow(4px 4px 15px rgba(255, 193, 7, 0.6)); }
+}
+
+.prize-info p {
+  margin: 0;
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Organizers */
+.organizers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.organizer-card {
+  background: rgba(96, 125, 139, 0.05);
+  border: 1px solid rgba(96, 125, 139, 0.2);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.organizer-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(96, 125, 139, 0.2);
+}
+
+.organizer-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.organizer-card h4 {
+  margin: 0 0 1rem 0;
+  color: #37474f;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.phone-link {
+  color: #546e7a;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(96, 125, 139, 0.3);
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.phone-link:hover {
+  background: #546e7a;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Responsiv design */
+@media (max-width: 768px) {
+  .tournament-hero {
+    height: 50vh;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+  }
+  
+  .title-line-1 {
+    font-size: 2.5rem;
+  }
+  
+  .title-line-2 {
+    font-size: 4rem;
+  }
+  
+  .hostbollen-container {
+    padding: 1.5rem;
+    margin: -5vh auto 0;
+  }
+  
+  .overview-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+  
+  .info-card {
+    padding: 1.5rem 1rem;
+  }
+  
+  .card-icon {
+    font-size: 2rem;
+  }
+  
+  .date-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .calendar-icon {
+    font-size: 2rem;
+  }
+  
+  .date-main {
+    font-size: 1.5rem;
+  }
+  
+  .registration-steps {
+    gap: 1.5rem;
+  }
+  
+  .step-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .organizers-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .tournament-hero {
+    height: 40vh;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .title-line-1 {
+    font-size: 2rem;
+  }
+  
+  .title-line-2 {
+    font-size: 3rem;
+  }
+  
+  .tournament-badge {
+    padding: 0.6rem 1.5rem;
+  }
+  
+  .badge-text {
+    font-size: 0.8rem;
+  }
+  
+  .hostbollen-container {
+    padding: 1rem;
+    margin: -3vh 0.5rem 0;
+  }
+  
+  .overview-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-header {
+    padding: 1rem 1.5rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  
+  .section-header h2 {
+    font-size: 1.3rem;
+  }
+  
+  .section-content {
+    padding: 1.5rem;
+  }
+  
+  .step-card {
+    padding: 1.5rem;
+  }
+  
+  .cost-amount {
+    font-size: 2.5rem;
+  }
+  
+  .swish-number {
+    font-size: 1.5rem;
+  }
+  
+  .registration-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .ball {
+    font-size: 1.5rem;
+  }
+}
+
+/* Animerade effekter för scroll */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Intersection Observer effekter */
+.content-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.content-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* JavaScript för scroll-animationer */
+.js-fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+
+.js-fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

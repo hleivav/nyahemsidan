@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SJTK — Nya medlemmar</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="newmember.css">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+  <nav id="main-menu" role="navigation">
+    <input type="checkbox" id="nav-toggle" aria-hidden="true">
+    <div class="menu-inner">
+      <a class="brand" href="/">SJTK</a>
+      <label class="hamburger" for="nav-toggle" aria-label="Meny">
+        <span></span><span></span><span></span>
+      </label>
+      <div class="nav-items">
+        <a href="index.html">Hem</a>
+        <div class="nav-dropdown">
+          <a href="#">Tävlingar</a>
+          <div class="dropdown-content">
+            <a href="tournamentregistration.html">Tävlingsanmälan</a>
+            <a href="schema.html">Spelscheman</a>
+            <a href="guidelines.html">Tävlingsanvisningar</a>
+            <a href="calendar.html">Tävlingskalender</a>
+          </div>
+        </div>
+        <a href="gruppspel.html">Gruppspel</a>
+        <a href="senior.html">Seniorverksamhet</a>
+        <a href="newmember.html" class="active">Ny medlem</a>
+        <a href="contact.html">Kontakt</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="newmember-main">
+    <div class="hero-section">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-icon">🆕</span>
+          NYA MEDLEMMAR
+        </div>
+        <h1>Nya medlemmar</h1>
+        <p class="hero-subtitle">Välkommen till SJ Tennisklubb</p>
+        <div class="floating-element element-1"></div>
+        <div class="floating-element element-2"></div>
+        <div class="floating-element element-3"></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="newmember-card">
+        <div class="section-image">
+          <img src="images/newmember.png" alt="Nya medlemmar" class="newmember-image">
+        </div>
+        
+        <div class="newmember-content">
+          <!-- Presentation av klubben -->
+          <div class="collapsible-section">
+            <button class="section-header" onclick="toggleSection('presentation')">
+              <h2>Presentation av klubben</h2>
+              <span class="expand-icon">▼</span>
+            </button>
+            <div class="section-content" id="presentation">
+              
+              <!-- Historik -->
+              <div class="info-block">
+                <h3>Historik</h3>
+                <p>Klubben bildades den 20 juni 1947 under namnet Järnvägsstyrelsens Personals Tennisklubb. 1967 ändrades namnet till det nuvarande, SJ Tennisklubb (SJTK), Stockholm.</p>
+              </div>
+
+              <!-- Uppgiften -->
+              <div class="info-block">
+                <h3>Uppgiften</h3>
+                <p>I stadgarna står att: "Klubbens uppgift är att på allt sätt underlätta för medlemmarna att utnyttja sin fritid. Klubben skall genom utövande av tennis samt i övrigt genom kamratlig samvaro verka för medlemmarnas fysiska välbefinnande."</p>
+              </div>
+
+              <!-- Organisation -->
+              <div class="info-block">
+                <h3>Organisation</h3>
+                <p>Klubben är ansluten till Järnvägarnas Fritidsförbund (JFF). Klubben arbetar genom Årsmöte, styrelse och kommittéer.</p>
+              </div>
+
+              <!-- Medlemskap och avgifter -->
+              <div class="info-block">
+                <h3>Medlemskap och avgifter</h3>
+                <h4>Årsavgifter</h4>
+                <div class="fees-table">
+                  <div class="fee-row">
+                    <span class="fee-category">Vuxna (Året du fyller 19)</span>
+                    <span class="fee-amount">300:-</span>
+                  </div>
+                  <div class="fee-row">
+                    <span class="fee-category">Ungdom (året du fyller 13)</span>
+                    <span class="fee-amount">100:-</span>
+                  </div>
+                  <div class="fee-row special">
+                    <span class="fee-category">Anslutning till JFF</span>
+                    <span class="fee-amount">130:-</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Anläggningar -->
+              <div class="info-block">
+                <h3>Anläggningar</h3>
+                <p>SJTK är delägare i Solna TennisCenter AB.</p>
+                <div class="booking-info">
+                  <p><strong>Boka via:</strong></p>
+                  <a href="https://www.matchi.se/facilities/solnatenniscenter?lang=sv" target="_blank" class="booking-link">
+                    <span class="link-icon">🌐</span>
+                    www.matchi.se/facilities/solnatenniscenter
+                  </a>
+                  <p class="phone-info">eller ring <a href="tel:08-859310" class="phone-link">08-859310</a></p>
+                </div>
+              </div>
+
+              <!-- Aktiviteter -->
+              <div class="info-block">
+                <h3>Aktiviteter</h3>
+                <p>Tävlingskommittén ansvarar för klubbens tävlings- och tennisaktiviteter.</p>
+                <ul class="activities-list">
+                  <li>Den externa tävlingsverksamhet som normalt bedrivs omfattar deltagande i Järnvägarnas Fritidsförbunds mästerskapstävlingar och utbyten med andra tennisklubbar.</li>
+                  <li>Klubbens interna tävlingar består av klubbmästerskap, handicap- och familjetävlingar, gruppspel och diverse trivseltävlingar.</li>
+                  <li>Se vår <a href="calendar.html" class="activity-link">tävlingskalender</a> för aktuella turneringar och evenemang.</li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Bli medlem -->
+          <div class="collapsible-section">
+            <button class="section-header membership-header" onclick="toggleSection('membership')">
+              <h2>Bli medlem</h2>
+              <span class="expand-icon">▼</span>
+            </button>
+            <div class="section-content" id="membership">
+              
+              <div class="membership-intro">
+                <p>Har du bestämt dig för att vilja vara med i klubben</p>
+              </div>
+
+              <div class="membership-steps">
+                <div class="step-card">
+                  <div class="step-number">1</div>
+                  <div class="step-content">
+                    <h3>Medlemsavgiften inbetalas</h3>
+                    <div class="payment-details">
+                      <p><strong>Till:</strong> SJ Tennisklubb</p>
+                      <p><strong>Plusgiro:</strong> 730363-9</p>
+                      <p><strong>Ange:</strong> "Medlemsavgift" och avsändare</p>
+                    </div>
+                    <div class="price-info">
+                      <div class="price-row">
+                        <span>Kalenderår vuxna (Från året man fyller 19 år):</span>
+                        <strong>300:-</strong>
+                      </div>
+                      <div class="price-row">
+                        <span>Kalenderår barn (Från året man fyller 13 år):</span>
+                        <strong>100:-</strong>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="step-card">
+                  <div class="step-number">2</div>
+                  <div class="step-content">
+                    <h3>Fyll i formuläret nedan</h3>
+                    <p>Använd formuläret nedan för att skicka in din medlemsansökan. Vi behandlar alla ansökningar inom 2-3 arbetsdagar.</p>
+                  </div>
+                </div>
+
+                <div class="step-card">
+                  <div class="step-number">3</div>
+                  <div class="step-content">
+                    <h3>Bekräftelse</h3>
+                    <p>Kassören kommer att bekräfta din medlemsansökan per mail</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Membership Form (initially hidden) -->
+          <div class="membership-form-section" id="membership-form">
+            <h3>Medlemsanmälan</h3>
+            <form id="newmember-form" class="contact-form">
+              <div class="form-group">
+                <label for="fullname">Fullständigt namn</label>
+                <input type="text" id="fullname" name="fullname" required>
+                <span class="error-message"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="email">E-postadress</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error-message"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Mobilnummer</label>
+                <input type="tel" id="phone" name="phone" required>
+                <span class="error-message"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="address">Adress</label>
+                <input type="text" id="address" name="address" required>
+                <span class="error-message"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="birthyear">Födelseår</label>
+                <input type="number" id="birthyear" name="birthyear" min="1930" max="2015" value="1980" required>
+                <span class="error-message"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="level">Uppskattad standard</label>
+                <input type="text" id="level" name="level" placeholder="T.ex. Nybörjare, Medel, Avancerad" required>
+                <span class="error-message"></span>
+              </div>
+
+              <div class="form-group">
+                <label class="membership-fee-label">Kryssa i vilken medlemsavgift du har betalat in till Plusgiro 730363-9</label>
+                <div class="checkbox-group">
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="fee300" name="membershipFee" value="300">
+                    <label for="fee300">300kr</label>
+                  </div>
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="fee100" name="membershipFee" value="100">
+                    <label for="fee100">100kr</label>
+                  </div>
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="feeNotPaid" name="membershipFee" value="notpaid">
+                    <label for="feeNotPaid">Ej betalat</label>
+                  </div>
+                </div>
+                <span class="error-message"></span>
+              </div>
+
+              <button type="submit" class="submit-button">
+                <span class="button-icon">�</span>
+                <span class="button-text">Skicka ansökan</span>
+              </button>
+
+              <div class="success-message" id="member-success-message">
+                ✅ Medlemsansökan har skickats! Kassören återkommer per mail.
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="newmember.js"></script>
+</body>
+</html>

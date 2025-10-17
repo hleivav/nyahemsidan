@@ -1,0 +1,236 @@
+/* Old Arrangements CSS - kort för genomförda aktiviteter */
+
+/* Body bakgrund för att eliminera vit ram */
+body {
+  background: linear-gradient(135deg, #073763 0%, #0B4A83 50%, #4A90C2 100%);
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+}
+
+/* Huvudcontainer */
+.arrangements-container {
+  min-height: calc(100vh - 64px);
+  background: linear-gradient(135deg, #073763 0%, #0B4A83 50%, #4A90C2 100%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Bakgrundsmönster */
+.arrangements-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(255,255,255,0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255,255,255,0.03) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(255,255,255,0.02) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Kort för arrangemang */
+.arrangement-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 1;
+}
+
+/* Huvudrubrik */
+.card-title {
+  color: #073763;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+}
+
+/* Bild - inte rund denna gång */
+.arrangement-image {
+  width: 100%;
+  max-width: 400px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Kombinationsruta för genomförda aktiviteter */
+.activities-list {
+  color: #073763;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  background: rgba(248, 249, 250, 0.8);
+  border-radius: 8px;
+  padding: 1rem;
+  border: 1px solid rgba(7, 55, 99, 0.2);
+}
+
+/* Aktivitetspost */
+.activity-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(7, 55, 99, 0.1);
+  font-size: 0.95rem;
+}
+
+.activity-item:last-child {
+  border-bottom: none;
+}
+
+/* Aktivitetsnamn */
+.activity-name {
+  font-weight: 600;
+  color: #073763;
+  flex: 1;
+}
+
+/* Datum */
+.activity-date {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-left: 1rem;
+  white-space: nowrap;
+}
+
+/* Tillbaka-ikon längst ner inom kortet */
+.back-to-home {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: #4A90C2;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  margin: 2rem auto 0;
+}
+
+.back-to-home:hover {
+  background: #073763;
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Pil-ikon som pekar åt vänster */
+.back-to-home::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 12px solid white;
+  margin-left: -2px;
+}
+
+/* Tooltip för hover-text */
+.back-to-home::after {
+  content: 'Tillbaka till klubbsidan';
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+}
+
+.back-to-home:hover::after {
+  opacity: 1;
+}
+
+/* Responsiv design */
+@media (max-width: 768px) {
+  .arrangements-container {
+    padding: 2rem 1rem;
+  }
+  
+  .arrangement-card {
+    padding: 1.5rem;
+    margin: 0 1rem;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+  }
+  
+  .arrangement-image {
+    height: 200px;
+  }
+  
+  .activity-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+  }
+  
+  .activity-date {
+    margin-left: 0;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .arrangements-container {
+    padding: 1.5rem 0.5rem;
+  }
+  
+  .arrangement-card {
+    padding: 1rem;
+    margin: 0 0.5rem;
+  }
+  
+  .card-title {
+    font-size: 1.3rem;
+  }
+  
+  .arrangement-image {
+    height: 180px;
+  }
+  
+  .activity-item {
+    font-size: 0.9rem;
+  }
+  
+  .activity-date {
+    font-size: 0.75rem;
+  }
+  
+  .back-to-home {
+    width: 45px;
+    height: 45px;
+    margin: 1.5rem auto 0;
+  }
+  
+  .back-to-home::after {
+    font-size: 12px;
+    top: -45px;
+  }
+}

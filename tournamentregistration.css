@@ -1,0 +1,401 @@
+/* Tournament Registration CSS - kort för tävlingsanmälningar */
+
+/* Body bakgrund för att eliminera vit ram */
+body {
+  background: linear-gradient(135deg, #073763 0%, #0B4A83 50%, #4A90C2 100%);
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+}
+
+/* Huvudcontainer */
+.registration-container {
+  min-height: calc(100vh - 64px);
+  background: linear-gradient(135deg, #073763 0%, #0B4A83 50%, #4A90C2 100%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Bakgrundsmönster */
+.registration-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(255,255,255,0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255,255,255,0.03) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(255,255,255,0.02) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Kort för tävlingsanmälan */
+.registration-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 1;
+}
+
+/* Huvudrubrik */
+.card-title {
+  color: #073763;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+}
+
+/* Underrubrik */
+.section-subtitle {
+  color: #0B4A83;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  text-align: center;
+}
+
+/* Bild för pågående anmälningar */
+.registration-image {
+  width: 100%;
+  max-width: 400px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center bottom;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Text under bilden */
+.tournament-name {
+  color: #073763;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+}
+
+/* Formulär-container */
+.registration-form-container {
+  background: rgba(248, 249, 250, 0.9);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(7, 55, 99, 0.1);
+}
+
+/* Formulär-rubrik */
+.form-title {
+  color: #073763;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+}
+
+/* Formulär-grupp */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+/* Labels */
+.form-label {
+  display: block;
+  color: #073763;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+}
+
+/* Input-fält */
+.form-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid rgba(7, 55, 99, 0.2);
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #4A90C2;
+  box-shadow: 0 0 0 3px rgba(74, 144, 194, 0.1);
+}
+
+/* Checkbox-grupp */
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.form-checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: #4A90C2;
+  cursor: pointer;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.checkbox-label {
+  color: #073763;
+  font-size: 0.95rem;
+  cursor: pointer;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  line-height: 1.4;
+  flex: 1;
+}
+
+/* Skicka-knapp */
+.submit-button {
+  width: 100%;
+  background: #4A90C2;
+  color: white;
+  border: none;
+  padding: 0.9rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  margin-top: 1rem;
+}
+
+.submit-button:hover:not(:disabled) {
+  background: #073763;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(7, 55, 99, 0.3);
+}
+
+.submit-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+/* Inaktiv knapp */
+.submit-button:disabled {
+  background: #ccc;
+  color: #999;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Fel-meddelanden */
+.error-message {
+  color: #d32f2f;
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+  display: none;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+}
+
+.error-message.show {
+  display: block;
+}
+
+/* Input-fält med fel */
+.form-input.error {
+  border-color: #d32f2f;
+  box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.1);
+}
+
+/* Bekräftelsemeddelande */
+.confirmation-message {
+  text-align: center;
+  padding: 2rem;
+  display: none;
+}
+
+.confirmation-message.show {
+  display: block;
+}
+
+.confirmation-icon {
+  font-size: 3rem;
+  color: #4CAF50;
+  margin-bottom: 1rem;
+}
+
+.confirmation-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #073763;
+  margin-bottom: 1rem;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+}
+
+.confirmation-text {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+}
+
+.confirmation-details {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+
+/* Navigation buttons container */
+.navigation-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+/* Navigationsknappar */
+.nav-button {
+  background: #4A90C2;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  min-width: 180px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.nav-button:hover {
+  background: #073763;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(7, 55, 99, 0.3);
+  color: white;
+  text-decoration: none;
+}
+
+.nav-button:active {
+  transform: translateY(0);
+}
+
+/* Responsiv design */
+@media (max-width: 768px) {
+  .registration-container {
+    padding: 2rem 1rem;
+  }
+  
+  .registration-card {
+    padding: 1.5rem;
+    margin: 0 1rem;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+  }
+  
+  .registration-image {
+    height: 240px;
+  }
+  
+  .section-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .tournament-name {
+    font-size: 1.2rem;
+  }
+  
+  .registration-form-container {
+    padding: 1.2rem;
+  }
+  
+  .form-title {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .registration-container {
+    padding: 1.5rem 0.5rem;
+  }
+  
+  .registration-card {
+    padding: 1rem;
+    margin: 0 0.5rem;
+  }
+  
+  .card-title {
+    font-size: 1.3rem;
+  }
+  
+  .registration-image {
+    height: 220px;
+  }
+  
+  .section-subtitle {
+    font-size: 1rem;
+  }
+  
+  .tournament-name {
+    font-size: 1.1rem;
+  }
+  
+  .registration-form-container {
+    padding: 1rem;
+  }
+  
+  .form-title {
+    font-size: 1rem;
+  }
+  
+  .form-input {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+  
+  .submit-button {
+    padding: 0.8rem 1.2rem;
+    font-size: 0.95rem;
+  }
+  
+  .back-to-home {
+    width: 45px;
+    height: 45px;
+    margin: 1.5rem auto 0;
+  }
+  
+  .back-to-home::after {
+    font-size: 12px;
+    top: -45px;
+  }
+}

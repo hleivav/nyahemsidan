@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SJTK — Hem</title>
+  <link rel="stylesheet" href="hostbolle-2025.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+  <nav id="main-menu" role="navigation">
+    <!-- CSS-only hamburger: a hidden checkbox controls visibility on small screens -->
+    <input type="checkbox" id="nav-toggle" aria-hidden="true">
+    <div class="menu-inner">
+      <a class="brand" href="/">SJTK</a>
+      <label class="hamburger" for="nav-toggle" aria-label="Meny">
+        <span></span><span></span><span></span>
+      </label>
+      <div class="nav-items">
+        <a href="index.html">Hem</a>
+        <div class="nav-dropdown">
+          <a href="#">Tävlingar</a>
+          <div class="dropdown-content">
+            <a href="tournamentregistration.html">Tävlingsanmälan</a>
+            <a href="schema.html">Spelscheman</a>
+            <a href="guidelines.html">Tävlingsanvisningar</a>
+            <a href="calendar.html">Tävlingskalender</a>
+          </div>
+        </div>
+        <a href="gruppspel.html">Gruppspel</a>
+        <a href="senior.html">Seniorverksamhet</a>
+        <a href="newmember.html">Ny medlem</a>
+        <a href="contact.html">Kontakt</a>
+      </div>
+    </div>
+  </nav>
+  <main class="hero-section">
+    <div class="logo-container">
+      <img src="images/logga.PNG" alt="SJTK Logga" />
+    </div>
+    
+    <h1 class="main-title">
+      <span class="title-line-1">SJTK</span>
+      <span class="title-line-2">Klubbsida</span>
+    </h1>
+
+    <div class="image-gallery">
+      <div class="image-item">
+        <a href="newarrangements.html">
+          <img src="images/newarrangments.png" alt="Kommande arrangemang" />
+        </a>
+        <div class="image-text">Kommande arrangemang</div>
+      </div>
+      <div class="image-item">
+        <!-- ===== PÅGÅR-IKON: KOMMENTERA UT RADEN NEDAN FÖR ATT DÖLJA ===== -->
+        <div class="ongoing-indicator">Anmälan pågår</div>
+        <!-- ===== SLUT PÅ PÅGÅR-IKON ===== -->
+        <a href="hostbollen.html">
+          <img src="images/currentarrangement.png" alt="Tävlingar och Event" />
+        </a>
+        <div class="image-text">Tävlingar och Event</div>
+      </div>
+      <div class="image-item">
+        <a href="oldarrangements.html">
+          <img src="images/passedarrangement.png" alt="Genomförda aktiviteter" />
+        </a>
+        <div class="image-text">Genomförda aktiviteter</div>
+      </div>
+    </div>
+  </main>
+  <!-- intro.js removed per request; menu is CSS-only now -->
+</body>
+</html>

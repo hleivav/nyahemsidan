@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SJTK — Tävlingsanvisningar</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="guidelines.css">
+</head>
+<body>
+  <nav id="main-menu" role="navigation">
+    <input type="checkbox" id="nav-toggle" aria-hidden="true">
+    <div class="menu-inner">
+      <a class="brand" href="/">SJTK</a>
+      <label class="hamburger" for="nav-toggle" aria-label="Meny">
+        <span></span><span></span><span></span>
+      </label>
+      <div class="nav-items">
+        <a href="index.html">Hem</a>
+        <div class="nav-dropdown">
+          <a href="#">Tävlingar</a>
+          <div class="dropdown-content">
+            <a href="tournamentregistration.html">Tävlingsanmälan</a>
+            <a href="schema.html">Spelscheman</a>
+            <a href="guidelines.html">Tävlingsanvisningar</a>
+            <a href="calendar.html">Tävlingskalender</a>
+          </div>
+        </div>
+        <a href="gruppspel.html">Gruppspel</a>
+        <a href="senior.html">Seniorverksamhet</a>
+        <a href="newmember.html">Ny medlem</a>
+        <a href="contact.html">Kontakt</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="guidelines-container">
+    <div class="guidelines-card">
+      <h1 class="card-title">Tävlingsanvisningar</h1>
+      
+      <!-- Progress bar -->
+      <div class="reading-progress">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+      
+      <!-- Innehållsförteckning -->
+      <div class="table-of-contents">
+        <h3>📋 Innehåll</h3>
+        <ul>
+          <li><a href="#basic-rules" class="toc-link">Grundläggande regler</a></li>
+          <li><a href="#lottery" class="toc-link">Lottningsförfarande</a></li>
+          <li><a href="#seeding" class="toc-link">Seedning</a></li>
+          <li><a href="#late-entries" class="toc-link">Efteranmälda spelare</a></li>
+          <li><a href="#equipment" class="toc-link">Utrustning</a></li>
+          <li><a href="#no-referee" class="toc-link">Spel utan domare</a></li>
+        </ul>
+      </div>
+
+      <div class="guidelines-content">
+        <!-- Introduktion -->
+        <div class="intro-section">
+          <div class="intro-banner">
+            <h2>🎾 SJTK TÄVLINGSANVISNINGAR</h2>
+            <div class="version-badge">Version 2016-04</div>
+          </div>
+          <p class="intro-text">
+            Regeltext anpassad för tävlingar anordnade av SJTK.<br>
+            Denna text ska ses som en sammanfattning och anpassning för SJTK av de viktigaste punkterna ur "Tävlingshandboken" utgiven av Svenska Tennisförbundet.
+          </p>
+        </div>
+
+        <!-- Grundläggande regler -->
+        <section id="basic-rules" class="guidelines-section">
+          <div class="section-header collapsible" data-target="basic-content">
+            <h2>📜 GRUNDLÄGGANDE REGLER</h2>
+            <span class="expand-icon">▼</span>
+          </div>
+          <div class="section-content" id="basic-content">
+            <div class="rule-grid">
+              <div class="rule-card">
+                <div class="rule-number">1</div>
+                <p>Medlemskap i SJTK krävs för alla arrangemang om annat inte anges i inbjudan.</p>
+              </div>
+              <div class="rule-card">
+                <div class="rule-number">2</div>
+                <p>För icke-tävlingar kan arrangören göra undantag från medlemskravet, detta skall ske sparsamt per eventuell ny medlem.</p>
+              </div>
+              <div class="rule-card">
+                <div class="rule-number">3</div>
+                <p>Vid Open-tävling behövs inte medlemskap i SJTK. Par i dubbelklass kan bestå av medlem och icke-medlem. Anmälningsavgiften gäller per person.</p>
+              </div>
+              <div class="rule-card highlight">
+                <div class="rule-number">4</div>
+                <p><strong>Spelform:</strong> KM- och OPEN-spelform: HSA i "Bäst av tre set med tiebreak." Övriga klasser i "Bäst av tre set med NoAd och tiebreak i de två första seten samt supertiebreak i avgörande set."</p>
+              </div>
+            </div>
+            
+            <div class="emergency-rules">
+              <h4>🚨 Vid överanmälan kan följande åtgärder vidtas:</h4>
+              <ul class="emergency-list">
+                <li><span class="bullet">a)</span> Tävlingsledningen kan korta spelformen i alla klasser (HSA)</li>
+                <li><span class="bullet">b)</span> "Icke-seedad spelare/par garanterad två matcher" kan återkallas</li>
+                <li><span class="bullet">c)</span> Möjlighet att äska mer tid i STC-hallen (kontakt via STC-shop minst 3 dagar innan)</li>
+              </ul>
+            </div>
+
+            <div class="important-notes">
+              <div class="note-item">
+                <span class="note-icon">⚖️</span>
+                <p>KM- och OPEN-tävling: B-klass ska ej fyllas upp för att uppnå ett "jämnt startfält".</p>
+              </div>
+              <div class="note-item">
+                <span class="note-icon">👥</span>
+                <p>Om arrangemang för "Herrar" utlyses, så skall även motsvarande arrangemang för "Damer" utlysas.</p>
+              </div>
+              <div class="note-item">
+                <span class="note-icon">💰</span>
+                <p>Presumtiv deltagare måste vara skuldfri till SJTK för att anmälan skall godtas.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Lottningsförfarande -->
+        <section id="lottery" class="guidelines-section">
+          <div class="section-header collapsible" data-target="lottery-content">
+            <h2>🎲 LOTTNINGSFÖRFARANDE</h2>
+            <span class="expand-icon">▼</span>
+          </div>
+          <div class="section-content" id="lottery-content">
+            <div class="lottery-rules">
+              <div class="lottery-case">
+                <div class="case-header">
+                  <span class="case-icon">❌</span>
+                  <h4>Färre än 3 deltagare</h4>
+                </div>
+                <p>Arrangemanget/tävlingen ställs in. Inbetald anmälningsavgift återbetalas.</p>
+              </div>
+              
+              <div class="lottery-case">
+                <div class="case-header">
+                  <span class="case-icon">🔄</span>
+                  <h4>3-4 deltagare</h4>
+                </div>
+                <p>Pool-lottning där alla spelare/lag möter alla de övriga spelare/lag.</p>
+              </div>
+              
+              <div class="lottery-case">
+                <div class="case-header">
+                  <span class="case-icon">📊</span>
+                  <h4>Fler än 3 deltagare</h4>
+                </div>
+                <p>Stegvis reducerande schema med radtal: <span class="highlight-numbers">4, 8, 16, 32</span> osv.</p>
+                <p class="sub-note">Om antalet deltagare ligger mellan dessa tal används närmast större lottningsschema.</p>
+              </div>
+            </div>
+            
+            <div class="seeding-note">
+              <p>💡 Lottning och fördelning följer principer från tävlingshandboken för seedade spelare/lag.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Seedning -->
+        <section id="seeding" class="guidelines-section">
+          <div class="section-header collapsible" data-target="seeding-content">
+            <h2>🏆 SEEDNING</h2>
+            <span class="expand-icon">▼</span>
+          </div>
+          <div class="section-content" id="seeding-content">
+            <div class="seeding-process">
+              <h4>📋 Bedömningsprocess</h4>
+              <div class="process-steps">
+                <div class="step">
+                  <div class="step-number">1</div>
+                  <p>Tävlingskommittén bedömer spelstyrkor</p>
+                </div>
+                <div class="step">
+                  <div class="step-number">2</div>
+                  <p>Presenterar rekommendation</p>
+                </div>
+                <div class="step">
+                  <div class="step-number">3</div>
+                  <p>Tävlingsledaren fattar slutgiltigt beslut</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="seeding-criteria">
+              <h4>📊 Bedömningskriterier</h4>
+              <ul class="criteria-list">
+                <li><span class="criteria-icon">🏅</span> Klubbrankning</li>
+                <li><span class="criteria-icon">📈</span> Styrkt resultatförteckning</li>
+                <li><span class="criteria-icon">👤</span> Personlig kännedom om kapacitet</li>
+                <li><span class="criteria-icon">🏠</span> Kontakt med hemmaklubbar (utomstående)</li>
+              </ul>
+            </div>
+
+            <div class="seeding-table">
+              <h4>📏 Antal seedade per klasstorlek</h4>
+              <table class="responsive-table">
+                <thead>
+                  <tr>
+                    <th>Antal deltagare</th>
+                    <th>Antal seedade</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>4-8</td>
+                    <td>2/4</td>
+                  </tr>
+                  <tr>
+                    <td>9-49</td>
+                    <td>4/8</td>
+                  </tr>
+                  <tr>
+                    <td>49+</td>
+                    <td>16/32</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- Efteranmälda spelare -->
+        <section id="late-entries" class="guidelines-section">
+          <div class="section-header collapsible" data-target="late-content">
+            <h2>⏰ EFTERANMÄLDA SPELARE OCH VAKANSER</h2>
+            <span class="expand-icon">▼</span>
+          </div>
+          <div class="section-content" id="late-content">
+            <div class="late-rules">
+              <div class="late-rule">
+                <h4>📅 Efteranmälan</h4>
+                <p>Spelare/lag som anmäler sig efter anmälningstidens utgång men före första matchstart får delta om tävlingsledningen så bestämmer.</p>
+              </div>
+              <div class="late-rule">
+                <h4>🚫 Uteblivna spelare</h4>
+                <p>Om spelare/lag inte infinner sig till matchstart får tävlingsledaren besluta att utdöma (W.O).</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Utrustning -->
+        <section id="equipment" class="guidelines-section">
+          <div class="section-header collapsible" data-target="equipment-content">
+            <h2>🎾 BOLLAR</h2>
+            <span class="expand-icon">▼</span>
+          </div>
+          <div class="section-content" id="equipment-content">
+            <div class="equipment-info">
+              <div class="equipment-card">
+                <h4>🏆 Tävlingskommitténs ansvar</h4>
+                <p>Beslutar om bollmärke med minst 4 bollar per förpackning.</p>
+              </div>
+              <div class="equipment-card">
+                <h4>👨‍💼 Tävlingsledarens ansvar</h4>
+                <p>Avgör fördelningen av nya respektive använda bollförpackningar mellan klasser och matcher.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Spel utan domare -->
+        <section id="no-referee" class="guidelines-section">
+          <div class="section-header collapsible" data-target="referee-content">
+            <h2>⚖️ SPEL UTAN DOMARE</h2>
+            <span class="expand-icon">▼</span>
+          </div>
+          <div class="section-content" id="referee-content">
+            <div class="referee-rules">
+              <h4>🏛️ Grundprinciper</h4>
+              <div class="principle-grid">
+                <div class="principle-card">
+                  <span class="principle-icon">👁️</span>
+                  <p>Spelarna ansvarar för domslut på sin sida av nätet</p>
+                </div>
+                <div class="principle-card">
+                  <span class="principle-icon">📢</span>
+                  <p>Alla "ute" och "fel" domslut måste göras omedelbart och hörbart</p>
+                </div>
+                <div class="principle-card">
+                  <span class="principle-icon">❓</span>
+                  <p>Vid osäkerhet ska bollen dömas till motståndarens fördel</p>
+                </div>
+                <div class="principle-card">
+                  <span class="principle-icon">🔄</span>
+                  <p>Felaktiga domslut som korrigeras ger poäng till motståndaren</p>
+                </div>
+              </div>
+
+              <div class="serve-rules">
+                <h4>🎾 Serveregler</h4>
+                <p>Servaren ska meddela poängställningen före varje poängs början, så högt att motståndaren kan höra det.</p>
+              </div>
+
+              <div class="clay-court-rules">
+                <h4>🟫 Särskilt för grusbana</h4>
+                <ul class="clay-list">
+                  <li>Bollmärke kan kollas för slag som avslutat poängen</li>
+                  <li>Spelare kan be motståndaren visa märket vid osäkerhet</li>
+                  <li>Radering av märke = poäng till motståndaren</li>
+                </ul>
+              </div>
+
+              <div class="referee-contact">
+                <h4>👨‍💼 Tillkalla tävlingsledare</h4>
+                <div class="contact-rules">
+                  <p>✅ Endast om icke-spelande tävlingsledare finns på plats</p>
+                  <p>❌ Får ej störa spelande tävlingsledare</p>
+                  <p>🤝 SJTK är en trivselklubb - lös problem tillsammans</p>
+                </div>
+              </div>
+
+              <div class="final-rules">
+                <h4>⚠️ Viktiga påminnelser</h4>
+                <ul class="final-list">
+                  <li>Spelarna ska följa tävlingsledarens anvisningar</li>
+                  <li>Osporsligt beteende kan leda till uteslutning</li>
+                  <li>Tävlingsledaren avgör frågor om "spel utan domare"</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <div class="guidelines-footer">
+          <p>📝 Detta dokument är skapat av SJTK tävlingskommitté och är till för både arrangörer och deltagare.</p>
+          <div class="footer-decoration">🎾 🏆 🎾</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Collapsible sections
+      const collapsibleHeaders = document.querySelectorAll('.collapsible');
+      
+      collapsibleHeaders.forEach(header => {
+        header.addEventListener('click', function() {
+          const targetId = this.getAttribute('data-target');
+          const content = document.getElementById(targetId);
+          const icon = this.querySelector('.expand-icon');
+          
+          if (content.style.display === 'none' || content.style.display === '') {
+            content.style.display = 'block';
+            icon.textContent = '▲';
+            this.classList.add('expanded');
+          } else {
+            content.style.display = 'none';
+            icon.textContent = '▼';
+            this.classList.remove('expanded');
+          }
+        });
+      });
+
+      // Smooth scrolling for TOC links
+      const tocLinks = document.querySelectorAll('.toc-link');
+      tocLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href').substring(1);
+          const targetElement = document.getElementById(targetId);
+          
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+            
+            // Expand the section if collapsed
+            const sectionContent = targetElement.querySelector('.section-content');
+            const header = targetElement.querySelector('.collapsible');
+            const icon = header.querySelector('.expand-icon');
+            
+            if (sectionContent && sectionContent.style.display !== 'block') {
+              sectionContent.style.display = 'block';
+              icon.textContent = '▲';
+              header.classList.add('expanded');
+            }
+          }
+        });
+      });
+
+      // Reading progress bar
+      const progressBar = document.getElementById('progressBar');
+      
+      window.addEventListener('scroll', function() {
+        const container = document.querySelector('.guidelines-container');
+        const containerTop = container.offsetTop;
+        const containerHeight = container.offsetHeight;
+        const windowHeight = window.innerHeight;
+        const scrollTop = window.scrollY;
+        
+        const progress = Math.min(100, Math.max(0, 
+          ((scrollTop - containerTop + windowHeight) / containerHeight) * 100
+        ));
+        
+        progressBar.style.width = progress + '%';
+      });
+
+      // Add hover effects to rule cards
+      const ruleCards = document.querySelectorAll('.rule-card');
+      ruleCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+          this.style.transform = 'translateY(-5px) scale(1.02)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+          this.style.transform = 'translateY(0) scale(1)';
+        });
+      });
+    });
+  </script>
+</body>
+</html>

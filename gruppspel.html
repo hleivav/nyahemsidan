@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gruppspel - SJTK</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="gruppspel.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <nav id="main-menu" role="navigation">
+        <input type="checkbox" id="nav-toggle" aria-hidden="true">
+        <div class="menu-inner">
+            <a class="brand" href="/">SJTK</a>
+            <label class="hamburger" for="nav-toggle" aria-label="Meny">
+                <span></span><span></span><span></span>
+            </label>
+            <div class="nav-items">
+                <a href="index.html">Hem</a>
+                <div class="nav-dropdown">
+                    <a href="#">Tävlingar</a>
+                    <div class="dropdown-content">
+                        <a href="tournamentregistration.html">Tävlingsanmälan</a>
+                        <a href="schema.html">Spelscheman</a>
+                        <a href="guidelines.html">Tävlingsanvisningar</a>
+                        <a href="calendar.html">Tävlingskalender</a>
+                    </div>
+                </div>
+                <a href="gruppspel.html" class="active">Gruppspel</a>
+                <a href="senior.html">Seniorverksamhet</a>
+                <a href="newmember.html">Ny medlem</a>
+                <a href="contact.html">Kontakt</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="gruppspel-main">
+        <div class="hero-section">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-icon">🏆</span>
+                    GRUPPSPEL
+                </div>
+                <h1>Gruppspel 2025</h1>
+                <p class="hero-subtitle">Singel & Dubbel • Anmälan senast 26 december 2024</p>
+                <div class="floating-ball ball-1"></div>
+                <div class="floating-ball ball-2"></div>
+                <div class="floating-ball ball-3"></div>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Singel Gruppspel -->
+            <div class="main-info-card">
+                <div class="collapsible-section">
+                    <button class="section-header" onclick="toggleSection('singel-info')">
+                        <h2>🎾 SINGELGRUPPSPELET</h2>
+                        <span class="expand-icon">▼</span>
+                    </button>
+                    <div class="section-content" id="singel-info">
+                        <div class="section-image">
+                            <img src="images/openinne.png" alt="Singel Tennis" class="tournament-image">
+                        </div>
+                        <div class="tournament-header">
+                            <h3>Gruppspel - Singel 2025</h3>
+                            <p class="deadline">Anmälan senast 26 december 2024</p>
+                        </div>
+                        
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="icon">📅</div>
+                                <div>
+                                    <h4>Start</h4>
+                                    <p>Preliminärt 16 januari 2025</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="icon">💰</div>
+                                <div>
+                                    <h4>Kostnad</h4>
+                                    <p>1010 kronor för vårens båda omgångar 2025</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="instructions-section">
+                            <h4>Instruktion för att deltaga</h4>
+                            
+                            <div class="instruction-tabs">
+                                <button class="tab-button active" onclick="showTab('singel-current-players')">
+                                    För nuvarande spelare
+                                </button>
+                                <button class="tab-button" onclick="showTab('singel-new-players')">
+                                    För nya spelare
+                                </button>
+                            </div>
+
+                            <!-- Tab A: För nuvarande spelare -->
+                            <div class="tab-content active" id="singel-current-players">
+                                <div class="step-card">
+                                    <h5><span class="step-number">1</span>Betalning</h5>
+                                    <div class="payment-info">
+                                        <p><strong>1010 Kronor</strong> till SJ Tennisklubb</p>
+                                        <p><strong>Plusgiro:</strong> 730363-9</p>
+                                        <p class="highlight">Ange avsändare samt "Gruppspel"</p>
+                                    </div>
+                                </div>
+
+                                <div class="step-card">
+                                    <h5><span class="step-number">2</span>Skicka intresseanmälan i Backhandsmash</h5>
+                                    <div class="instruction-steps">
+                                        <p>Efter du gjort din betalning:</p>
+                                        <ol>
+                                            <li>Gå in på Backhandsmash hemsida för SJTK Gruppspel</li>
+                                            <li>Här finner du information om regler och villkor</li>
+                                            <li>Följ text ner till avsnitt "För dig som vill vara med"</li>
+                                            <li>Tryck på <strong>Intresseanmälan</strong></li>
+                                        </ol>
+                                        
+                                        <div class="backhandsmash-link">
+                                            <a href="https://backhandsmash.nu/klubbar/sjtk/gruppspel/start" target="_blank" class="cta-button">
+                                                <span class="button-icon">🔗</span>
+                                                Gå till Backhandsmash
+                                            </a>
+                                        </div>
+
+                                        <div class="important-note">
+                                            <h6>Viktigt!</h6>
+                                            <p>I fältet "Meddelande" - ange hur mycket du betalat till SJTK</p>
+                                            <p class="warning">(gör du inte det så riskerar du att få komplettera din anmälan)</p>
+                                        </div>
+
+                                        <div class="confirmation-info">
+                                            <p>✉️ Du får mailbekräftelse på din anmälan</p>
+                                            <p class="note">Ej automatisk. Kan ta några dagar</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tab B: För nya spelare -->
+                            <div class="tab-content" id="singel-new-players">
+                                <div class="step-card">
+                                    <h5>För dig som inte är med i nuvarande omgång</h5>
+                                    <div class="instruction-steps">
+                                        <ol>
+                                            <li>Gå till Backhandsmash hemsida för SJTK Gruppspel</li>
+                                            <li>Läs information, regler och villkor</li>
+                                            <li>Om du är intresserad, skicka in en intresseanmälan via Backhandsmash</li>
+                                        </ol>
+                                        
+                                        <div class="backhandsmash-link">
+                                            <a href="https://backhandsmash.nu/klubbar/sjtk/gruppspel/start" target="_blank" class="cta-button">
+                                                <span class="button-icon">🔗</span>
+                                                Gå till Backhandsmash
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="step-card">
+                                    <h5>Spelstyrka</h5>
+                                    <p>Ni som inte har spelat tidigare i Gruppspelet, vänligen beskriv:</p>
+                                    <ul>
+                                        <li>Din spelstyrka och tennishistorik</li>
+                                        <li>Om du känner någon i klubben som kan bedöma din spelstyrka</li>
+                                    </ul>
+                                </div>
+
+                                <div class="step-card">
+                                    <h5>Besked och betalning</h5>
+                                    <div class="process-info">
+                                        <p>När anmälningstiden går ut kan du få besked om att det finns plats för dig.</p>
+                                        <p class="highlight">Då får du vara beredd att svara snabbt!</p>
+                                        <p>Betalning och medlemskap skall då ordnas.</p>
+                                    </div>
+                                </div>
+
+                                <div class="membership-requirement">
+                                    <h5>Medlemskap krävs</h5>
+                                    <p>Alla som spelar gruppspel skall vara SJTK medlemmar.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dubbel Gruppspel -->
+            <div class="main-info-card">
+                <div class="collapsible-section">
+                    <button class="section-header dubbel-header" onclick="toggleSection('dubbel-info')">
+                        <h2>🏆 DUBBELGRUPPSPELET</h2>
+                        <span class="expand-icon">▼</span>
+                    </button>
+                    <div class="section-content" id="dubbel-info">
+                        <div class="section-image">
+                            <img src="images/dubbel.png" alt="Dubbel Tennis" class="tournament-image">
+                        </div>
+                        <div class="tournament-header">
+                            <h3>Gruppspel - Dubbel 2025</h3>
+                            <p class="deadline">Anmälan senast 26 december 2024</p>
+                        </div>
+                        
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="icon">📅</div>
+                                <div>
+                                    <h4>Start</h4>
+                                    <p>Preliminärt 22 januari 2025</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="icon">💰</div>
+                                <div>
+                                    <h4>Kostnad</h4>
+                                    <p>130 kronor per lag och match</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="instructions-section">
+                            <h4>Instruktion för att deltaga</h4>
+                            
+                            <div class="step-card">
+                                <h5><span class="step-number">1</span>Betalning</h5>
+                                <div class="payment-info coming-later">
+                                    <p><strong>Information om betalning kommer senare</strong></p>
+                                </div>
+                            </div>
+
+                            <div class="step-card">
+                                <h5><span class="step-number">2</span>Anmälan</h5>
+                                <div class="email-registration">
+                                    <p><strong>Anmälan skickas till:</strong></p>
+                                    <div class="email-contact">
+                                        <a href="mailto:dubbel@sjtk.se" class="email-button">
+                                            <span class="button-icon">📧</span>
+                                            dubbel@sjtk.se
+                                        </a>
+                                    </div>
+                                    <p class="deadline-reminder">Sista anmälningdag: <strong>26 december 2024</strong></p>
+                                    <p class="note">(Info om betalning kommer er senare)</p>
+                                </div>
+                                
+                                <div class="email-instructions">
+                                    <h6>Vad ska mailen innehålla:</h6>
+                                    <ul>
+                                        <li><strong>Namn</strong> på samtliga deltagare</li>
+                                        <li><strong>Mailadress</strong> till samtliga deltagare</li>
+                                        <li><strong>Telefonnummer</strong> till samtliga deltagare</li>
+                                        <li><strong>Datum ni inte kan spela</strong> (om det finns några)</li>
+                                    </ul>
+                                    <p class="important-text">Mycket viktigt att ange all information!</p>
+                                </div>
+                            </div>
+
+                            <div class="step-card">
+                                <h5>Lagbildning</h5>
+                                <div class="team-info">
+                                    <div class="team-size">
+                                        <h6>Lagstorlek</h6>
+                                        <p><strong>2-4 personer</strong> bildar Par/Lag</p>
+                                    </div>
+                                    
+                                    <div class="partner-search">
+                                        <h6>Saknar partner?</h6>
+                                        <p>Har du ingen partner? Anmäl ditt intresse så kan vi tipsa om andra som inte heller har det, så kan ni kanske bilda ett lag.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="step-card">
+                                <h5>Medlemskap & Bekräftelse</h5>
+                                <div class="membership-confirmation">
+                                    <div class="membership-requirement">
+                                        <p><strong>Alla som spelar gruppspel skall vara SJTK medlemmar.</strong></p>
+                                        <p class="note">Detta gäller även ersättare som hoppar in.</p>
+                                    </div>
+                                    
+                                    <div class="confirmation-info">
+                                        <p>✉️ Du får mailbekräftelse på din anmälan</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="gruppspel.js"></script>
+</body>
+</html>

@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SJTK — Aktivitetskalender</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="calendar.css">
+</head>
+<body>
+  <nav id="main-menu" role="navigation">
+    <input type="checkbox" id="nav-toggle" aria-hidden="true">
+    <div class="menu-inner">
+      <a class="brand" href="/">SJTK</a>
+      <label class="hamburger" for="nav-toggle" aria-label="Meny">
+        <span></span><span></span><span></span>
+      </label>
+      <div class="nav-items">
+        <a href="index.html">Hem</a>
+        <div class="nav-dropdown">
+          <a href="#">Tävlingar</a>
+          <div class="dropdown-content">
+            <a href="tournamentregistration.html">Tävlingsanmälan</a>
+            <a href="schema.html">Spelscheman</a>
+            <a href="guidelines.html">Tävlingsanvisningar</a>
+            <a href="calendar.html">Tävlingskalender</a>
+          </div>
+        </div>
+        <a href="gruppspel.html">Gruppspel</a>
+        <a href="senior.html">Seniorverksamhet</a>
+        <a href="newmember.html">Ny medlem</a>
+        <a href="contact.html">Kontakt</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="calendar-container">
+    <div class="calendar-card">
+      <div class="calendar-header">
+        <h1 class="card-title">Aktivitetskalender</h1>
+        <div class="year-badge">2025</div>
+      </div>
+      
+      <!-- Säsongsövergångar -->
+      <div class="season-indicators">
+        <div class="season winter active" data-season="winter">❄️ Vinter</div>
+        <div class="season spring" data-season="spring">🌸 Vår</div>
+        <div class="season summer" data-season="summer">☀️ Sommar</div>
+        <div class="season autumn" data-season="autumn">🍂 Höst</div>
+      </div>
+
+      <div class="calendar-content">
+        <!-- Januari -->
+        <div class="month-section winter-month" data-month="1">
+          <div class="month-header">
+            <div class="month-icon">❄️</div>
+            <h2 class="month-title">Januari</h2>
+            <div class="temperature-indicator cold">🌡️</div>
+          </div>
+          <div class="events-list">
+            <div class="event-card special-event">
+              <div class="event-icon">🏠</div>
+              <div class="event-content">
+                <h3>Öppet Hus</h3>
+                <p>Gratis spel • 2 banor i två timmar mellan singel/gruppspel</p>
+              </div>
+              <div class="event-type free">GRATIS</div>
+            </div>
+            <div class="event-card">
+              <div class="event-icon">👥</div>
+              <div class="event-content">
+                <h3>Gruppspel Singel</h3>
+                <p>Omgång 1 (jan–mars/april)</p>
+              </div>
+              <div class="event-type tournament">GRUPPSPEL</div>
+            </div>
+            <div class="event-card">
+              <div class="event-icon">🏆</div>
+              <div class="event-content">
+                <h3>Seriedubbel</h3>
+                <p>Vårtermin start</p>
+              </div>
+              <div class="event-type series">SERIE</div>
+            </div>
+            <div class="event-card championship">
+              <div class="event-icon">🏆</div>
+              <div class="event-content">
+                <h3>Klubbmästerskap LAG INNE</h3>
+                <p>Inomhusmästerskap</p>
+              </div>
+              <div class="event-type km">KM</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Februari -->
+        <div class="month-section winter-month" data-month="2">
+          <div class="month-header">
+            <div class="month-icon">💝</div>
+            <h2 class="month-title">Februari</h2>
+            <div class="temperature-indicator cold">🌡️</div>
+          </div>
+          <div class="events-list">
+            <div class="event-card open-tournament">
+              <div class="event-icon">🎾</div>
+              <div class="event-content">
+                <h3>SJTK OPEN MIX INNE</h3>
+                <p>Öppen tävling inomhus</p>
+              </div>
+              <div class="event-type open">OPEN</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mars -->
+        <div class="month-section spring-month" data-month="3">
+          <div class="month-header">
+            <div class="month-icon">🌸</div>
+            <h2 class="month-title">Mars</h2>
+            <div class="temperature-indicator mild">🌡️</div>
+          </div>
+          <div class="events-list">
+            <div class="event-card special-event">
+              <div class="event-icon">🏠</div>
+              <div class="event-content">
+                <h3>Öppet Hus</h3>
+                <p>Gratis spel för alla</p>
+              </div>
+              <div class="event-type free">GRATIS</div>
+            </div>
+            <div class="event-card">
+              <div class="event-icon">👥</div>
+              <div class="event-content">
+                <h3>Gruppspel Singel</h3>
+                <p>Omgång 2 (mars–juni)</p>
+              </div>
+              <div class="event-type tournament">GRUPPSPEL</div>
+            </div>
+            <div class="event-card important">
+              <div class="event-icon">🏛️</div>
+              <div class="event-content">
+                <h3>SJTK Årsmöte</h3>
+                <p>Klubbens årliga möte</p>
+              </div>
+              <div class="event-type meeting">MÖTE</div>
+            </div>
+            <div class="event-card championship">
+              <div class="event-icon">🏆</div>
+              <div class="event-content">
+                <h3>Klubbmästerskap SINGEL INNE</h3>
+                <p>Inomhusmästerskap</p>
+              </div>
+              <div class="event-type km">KM</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- April -->
+        <div class="month-section spring-month" data-month="4">
+          <div class="month-header">
+            <div class="month-icon">🌱</div>
+            <h2 class="month-title">April</h2>
+            <div class="temperature-indicator mild">🌡️</div>
+          </div>
+          <div class="events-list">
+            <div class="event-card special-event">
+              <div class="event-icon">🏠</div>
+              <div class="event-content">
+                <h3>Öppet Hus</h3>
+                <p>Gratis spel för alla</p>
+              </div>
+              <div class="event-type free">GRATIS</div>
+            </div>
+            <div class="event-card special">
+              <div class="event-icon">💕</div>
+              <div class="event-content">
+                <h3>SJTK Vårdubbel</h3>
+                <p>Spel med mixat lag</p>
+              </div>
+              <div class="event-type mixed">MIX</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Maj -->
+        <div class="month-section spring-month" data-month="5">
+          <div class="month-header">
+            <div class="month-icon">🌺</div>
+            <h2 class="month-title">Maj</h2>
+            <div class="temperature-indicator warm">🌡️</div>
+          </div>
+          <div class="events-list">
+            <div class="event-card open-tournament outdoor">
+              <div class="event-icon">🌞</div>
+              <div class="event-content">
+                <h3>SJTK OPEN UTOMHUS</h3>
+                <p>Södra TK • Singel och Dubbel</p>
+              </div>
+              <div class="event-type open">OPEN</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Juni -->
+        <div class="month-section summer-month" data-month="6">
+          <div class="month-header">
+            <div class="month-icon">☀️</div>
+            <h2 class="month-title">Juni</h2>
+            <div class="temperature-indicator warm">🌡️</div>
+          </div>
+          <div class="events-list">
+            <div class="event-card open-tournament outdoor">
+              <div class="event-icon">🌞</div>
+              <div class="event-content">
+                <h3>SJTK OPEN UTOMHUS</h3>
+                <p>Södra TK • Singel och Dubbel</p>
+              </div>
+              <div class="event-type open">OPEN</div>
+            </div>
+            <div class="event-card">
+              <div class="event-icon">👥</div>
+              <div class="event-content">
+                <h3>Gruppspel Singel</h3>
+                <p>Omgång 3 (jun–sep)</p>
+              </div>
+              <div class="event-type tournament">GRUPPSPEL</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Juli -->
+        <div class="month-section summer-month" data-month="7">
+          <div class="month-header">
+            <div class="month-icon">🏖️</div>
+            <h2 class="month-title">Juli</h2>
+            <div class="temperature-indicator hot">🌡️</div>
+          </div>
+          <div class="events-list">
+            <div class="event-card championship outdoor highlight">
+              <div class="event-icon">🏆</div>
+              <div class="event-content">
+                <h3>Klubbmästerskap SINGEL & DUBBEL UTOMHUS</h3>
+                <p>Vecka 29 • Två veckor</p>
+              </div>
+              <div class="event-type km">KM</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Augusti -->
+        <div class="month-section summer-month" data-month="8">
+          <div class="month-header">
+            <div class="month-icon">🌻</div>
+            <h2 class="month-title">Augusti</h2>
+            <div class="temperature-indicator hot">🌡️</div>
+          </div>
+          <div class="events-list">
+            <div class="event-card championship outdoor">
+              <div class="event-icon">🏆</div>
+              <div class="event-content">
+                <h3>Klubbmästerskap SINGEL & DUBBEL UTOMHUS</h3>
+                <p>Fortsättning från juli</p>
+              </div>
+              <div class="event-type km">KM</div>
+            </div>
+            <div class="event-card special trip">
+              <div class="event-icon">🚌</div>
+              <div class="event-content">
+                <h3>SJTK Klubbresa</h3>
+                <p>Järfälla</p>
+              </div>
+              <div class="event-type trip">RESA</div>
+            </div>
+            <div class="event-card open-tournament outdoor">
+              <div class="event-icon">🌞</div>
+              <div class="event-content">
+                <h3>SJTK OPEN UTOMHUS</h3>
+                <p>Södra TK</p>
+              </div>
+              <div class="event-type open">OPEN</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- September -->
+        <div class="month-section autumn-month" data-month="9">
+          <div class="month-header">
+            <div class="month-icon">🍂</div>
+            <h2 class="month-title">September</h2>
+            <div class="temperature-indicator mild">🌡️</div>
+          </div>
+          <div class="events-list">
+            <div class="event-card open-tournament outdoor">
+              <div class="event-icon">🌞</div>
+              <div class="event-content">
+                <h3>SJTK OPEN UTOMHUS</h3>
+                <p>Södra TK</p>
+              </div>
+              <div class="event-type open">OPEN</div>
+            </div>
+            <div class="event-card">
+              <div class="event-icon">👥</div>
+              <div class="event-content">
+                <h3>Gruppspel Singel</h3>
+                <p>Omgång 4 (sep–nov)</p>
+              </div>
+              <div class="event-type tournament">GRUPPSPEL</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Oktober -->
+        <div class="month-section autumn-month" data-month="10">
+          <div class="month-header">
+            <div class="month-icon">🎃</div>
+            <h2 class="month-title">Oktober</h2>
+            <div class="temperature-indicator cool">🌡️</div>
+          </div>
+          <div class="events-list">
+            <div class="event-card championship outdoor">
+              <div class="event-icon">🏆</div>
+              <div class="event-content">
+                <h3>Klubbmästerskap LAG UTOMHUS</h3>
+                <p>Lagmästerskap utomhus</p>
+              </div>
+              <div class="event-type km">KM</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Oktober/November -->
+        <div class="month-section autumn-month" data-month="10-11">
+          <div class="month-header">
+            <div class="month-icon">🍁</div>
+            <h2 class="month-title">Okt/Nov</h2>
+            <div class="temperature-indicator cool">🌡️</div>
+          </div>
+          <div class="events-list">
+            <div class="event-card open-tournament outdoor">
+              <div class="event-icon">🌟</div>
+              <div class="event-content">
+                <h3>SJTK OPEN MIX UTOMHUS</h3>
+                <p>Öppen mix-tävling</p>
+              </div>
+              <div class="event-type open">OPEN</div>
+            </div>
+            <div class="event-card special">
+              <div class="event-icon">💕</div>
+              <div class="event-content">
+                <h3>SJTK Höstdubbel</h3>
+                <p>Spel med mixat lag</p>
+              </div>
+              <div class="event-type mixed">MIX</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- November -->
+        <div class="month-section winter-month" data-month="11">
+          <div class="month-header">
+            <div class="month-icon">🦃</div>
+            <h2 class="month-title">November</h2>
+            <div class="temperature-indicator cold">🌡️</div>
+          </div>
+          <div class="events-list">
+            <div class="event-card special-event">
+              <div class="event-icon">🏠</div>
+              <div class="event-content">
+                <h3>Öppet Hus</h3>
+                <p>Gratis spel för alla</p>
+              </div>
+              <div class="event-type free">GRATIS</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- December -->
+        <div class="month-section winter-month" data-month="12">
+          <div class="month-header">
+            <div class="month-icon">🎄</div>
+            <h2 class="month-title">December</h2>
+            <div class="temperature-indicator cold">🌡️</div>
+          </div>
+          <div class="events-list">
+            <div class="event-card special-event">
+              <div class="event-icon">🏠</div>
+              <div class="event-content">
+                <h3>Öppet Hus</h3>
+                <p>Gratis spel för alla</p>
+              </div>
+              <div class="event-type free">GRATIS</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Information om Öppet Hus -->
+        <div class="info-section">
+          <div class="info-card">
+            <div class="info-icon">ℹ️</div>
+            <div class="info-content">
+              <h3>Om Öppet Hus</h3>
+              <p>Förutsätter att banor är bokade. Brukar bli ungefär sju stycken per år.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Säsongsfiltrering
+      const seasonButtons = document.querySelectorAll('.season');
+      const monthSections = document.querySelectorAll('.month-section');
+      
+      seasonButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const selectedSeason = this.getAttribute('data-season');
+          
+          // Uppdatera aktiv säsong
+          seasonButtons.forEach(btn => btn.classList.remove('active'));
+          this.classList.add('active');
+          
+          // Visa/dölj månader baserat på säsong
+          monthSections.forEach(section => {
+            if (selectedSeason === 'all' || section.classList.contains(selectedSeason + '-month')) {
+              section.style.display = 'block';
+              section.style.animation = 'fadeInUp 0.5s ease-in-out';
+            } else {
+              section.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      // Lägg till "Visa alla" knapp
+      const showAllButton = document.createElement('div');
+      showAllButton.className = 'season';
+      showAllButton.setAttribute('data-season', 'all');
+      showAllButton.innerHTML = '📅 Alla';
+      showAllButton.addEventListener('click', function() {
+        seasonButtons.forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+        monthSections.forEach(section => {
+          section.style.display = 'block';
+          section.style.animation = 'fadeInUp 0.5s ease-in-out';
+        });
+      });
+      document.querySelector('.season-indicators').appendChild(showAllButton);
+
+      // Animera event-kort vid scroll
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.animation = 'slideInLeft 0.6s ease-out forwards';
+            entry.target.style.opacity = '1';
+          }
+        });
+      }, observerOptions);
+
+      // Observera alla event-kort
+      document.querySelectorAll('.event-card').forEach(card => {
+        card.style.opacity = '0';
+        observer.observe(card);
+      });
+
+      // Hover-effekter för event-kort
+      document.querySelectorAll('.event-card').forEach(card => {
+        card.addEventListener('mouseenter', function() {
+          this.style.transform = 'translateY(-8px) scale(1.02)';
+          this.style.boxShadow = '0 12px 30px rgba(74, 144, 194, 0.3)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+          this.style.transform = 'translateY(0) scale(1)';
+          this.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
+        });
+      });
+
+      // Pulsande effekt för viktiga event
+      setInterval(() => {
+        document.querySelectorAll('.highlight').forEach(card => {
+          card.style.animation = 'pulse 2s ease-in-out';
+          setTimeout(() => {
+            card.style.animation = '';
+          }, 2000);
+        });
+      }, 5000);
+    });
+  </script>
+</body>
+</html>

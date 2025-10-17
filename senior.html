@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SJTK — Seniorverksamhet</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="senior.css">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+  <nav id="main-menu" role="navigation">
+    <input type="checkbox" id="nav-toggle" aria-hidden="true">
+    <div class="menu-inner">
+      <a class="brand" href="/">SJTK</a>
+      <label class="hamburger" for="nav-toggle" aria-label="Meny">
+        <span></span><span></span><span></span>
+      </label>
+      <div class="nav-items">
+        <a href="index.html">Hem</a>
+        <div class="nav-dropdown">
+          <a href="#">Tävlingar</a>
+          <div class="dropdown-content">
+            <a href="tournamentregistration.html">Tävlingsanmälan</a>
+            <a href="schema.html">Spelscheman</a>
+            <a href="guidelines.html">Tävlingsanvisningar</a>
+            <a href="calendar.html">Tävlingskalender</a>
+          </div>
+        </div>
+        <a href="gruppspel.html">Gruppspel</a>
+        <a href="senior.html" class="active">Seniorverksamhet</a>
+        <a href="newmember.html">Ny medlem</a>
+        <a href="contact.html">Kontakt</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="senior-main">
+    <div class="hero-section">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-icon">👥</span>
+          SENIORVERKSAMHET
+        </div>
+        <h1>Seniorverksamhet</h1>
+        <p class="hero-subtitle">Tennis för seniorer i SJTK</p>
+        <div class="floating-ball racket-1"></div>
+        <div class="floating-ball racket-2"></div>
+        <div class="floating-ball racket-3"></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="senior-card">
+        <div class="section-image">
+          <img src="images/senior.png" alt="Seniorverksamhet" class="senior-image">
+        </div>
+        
+        <div class="senior-content">
+          <div class="intro-text">
+            <p>Ett antal seniorer är medlemmar i SJTK och spelar regelbundet i Solna Tennis Center.</p>
+          </div>
+
+          <div class="schedule-section">
+            <h2>Vi spelar</h2>
+            
+            <div class="schedule-grid">
+              <div class="schedule-card monday">
+                <div class="schedule-header">
+                  <div class="day-icon">📅</div>
+                  <div class="day-info">
+                    <h3>Måndagar</h3>
+                    <p class="time">kl. 10-12</p>
+                    <p class="court">(bana 8)</p>
+                  </div>
+                </div>
+                <div class="contact-info">
+                  <h4>Kontaktperson</h4>
+                  <p class="contact-name">Hans Gedlitschka</p>
+                  <a href="tel:076-878 33 28" class="contact-phone">
+                    <span class="phone-icon">📞</span>
+                    076-878 33 28
+                  </a>
+                </div>
+              </div>
+
+              <div class="schedule-card thursday">
+                <div class="schedule-header">
+                  <div class="day-icon">📅</div>
+                  <div class="day-info">
+                    <h3>Torsdagar</h3>
+                    <p class="time">kl. 10-12</p>
+                    <p class="court">(bana 8)</p>
+                  </div>
+                </div>
+                <div class="contact-info">
+                  <h4>Kontaktperson</h4>
+                  <p class="contact-name">Nils Fredriksson</p>
+                  <a href="tel:073-9086281" class="contact-phone">
+                    <span class="phone-icon">📞</span>
+                    073-9086281
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-section">
+            <div class="info-card">
+              <div class="info-icon">🏟️</div>
+              <div class="info-content">
+                <h3>Plats</h3>
+                <p>Solna Tennis Center</p>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-icon">🕘</div>
+              <div class="info-content">
+                <h3>Speltider</h3>
+                <p>Måndagar & Torsdagar 10-12</p>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-icon">🎾</div>
+              <div class="info-content">
+                <h3>Bana</h3>
+                <p>Bana 8</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-section">
+            <h2>Kontakta oss</h2>
+            <p class="form-description">Har du frågor om seniorverksamheten? Skicka oss ett meddelande!</p>
+            
+            <form id="senior-contact-form" class="contact-form">
+              <div class="form-group">
+                <label for="name">Namn</label>
+                <input type="text" id="name" name="name" required>
+                <span class="error-message" id="name-error"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="email">E-post</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error-message" id="email-error"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Skriv meddelande</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <span class="error-message" id="message-error"></span>
+              </div>
+
+              <button type="submit" class="submit-button">
+                <span class="button-icon">📧</span>
+                Skicka meddelande
+              </button>
+
+              <div class="success-message" id="success-message">
+                ✅ Meddelandet har skickats! Vi återkommer inom kort.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="senior.js"></script>
+</body>
+</html>

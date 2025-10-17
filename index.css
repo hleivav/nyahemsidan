@@ -1,0 +1,282 @@
+/* Intro-only layout: applied only when the page sets data-intro="true" on the body */
+body[data-intro="true"] {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0f0f0;
+  overflow: hidden;
+}
+
+/* For normal site pages (where we show the fixed #main-menu), add top padding
+   so the fixed navbar does not cover content. Adjust if you change the
+   navbar padding/height. */
+body:not([data-intro="true"]) {
+  padding-top: 64px;
+  background: linear-gradient(135deg, #073763 0%, #0B4A83 50%, #4A90C2 100%);
+  margin: 0;
+  min-height: 100vh;
+}
+
+
+
+.ball {
+  width: 240px;
+  height: 240px;
+  background: radial-gradient(circle at 30% 30%, #f9f871, #e0c200);
+  border-radius: 50%;
+  position: absolute;
+  top: -80px;
+  transition: top 0.5s cubic-bezier(.28,.84,.42,1);
+}
+
+/* Navbar styles (bootstrap-like) */
+#main-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* center the menu horizontally */
+  padding: 0.5rem 1rem;
+  background: #073763; /* deep navy (match logo) */
+  color: #fff;
+}
+
+#main-menu .brand {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-right: 2.5rem; /* push nav items slightly to the right so brand appears more left */
+}
+
+/* Constrain the inner contents so links can be centered while brand remains visually left */
+#main-menu > .menu-inner {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+#main-menu .brand {
+  position: absolute;
+  left: 16px;
+}
+
+#main-menu .nav-items {
+  flex: 1 0 auto;
+  justify-content: center;
+}
+
+#main-menu .brand img {
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+#main-menu .brand:hover img {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 22px rgba(7,55,99,0.12);
+}
+
+#main-menu .nav-items {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Dropdown container */
+.nav-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown knapp */
+.nav-dropdown > a {
+  color: #eaf3ff;
+  text-decoration: none;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* Pil-ikon för dropdown */
+.nav-dropdown > a::after {
+  content: '▼';
+  font-size: 0.7rem;
+  transition: transform 0.3s ease;
+}
+
+/* Vanliga nav-länkar */
+#main-menu .nav-items a:not(.nav-dropdown > a) {
+  color: #eaf3ff;
+  text-decoration: none;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+#main-menu .nav-items a:hover {
+  background: rgba(11,74,131,0.12);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(7,55,99,0.06);
+}
+
+/* Dropdown-meny */
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #073763;
+  min-width: 200px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  z-index: 1001;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  margin-top: 0.5rem;
+}
+
+/* Visa dropdown vid hover */
+.nav-dropdown:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Rotera pil vid hover */
+.nav-dropdown:hover > a::after {
+  transform: rotate(180deg);
+}
+
+/* Dropdown-länkar */
+.dropdown-content a {
+  color: #eaf3ff !important;
+  padding: 0.8rem 1rem !important;
+  text-decoration: none;
+  display: block;
+  transition: all 0.2s ease;
+  border-radius: 0 !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.dropdown-content a:first-child {
+  border-radius: 8px 8px 0 0 !important;
+}
+
+.dropdown-content a:last-child {
+  border-radius: 0 0 8px 8px !important;
+}
+
+.dropdown-content a:hover {
+  background: rgba(11,74,131,0.3) !important;
+  color: #fff !important;
+  padding-left: 1.2rem !important;
+}
+
+/* CSS-only hamburger toggle using a hidden checkbox */
+#nav-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  padding: 6px;
+}
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+@media (max-width: 700px) {
+  #main-menu {
+    padding: 0.5rem;
+  }
+  /* mobile: nav-items hidden by default, shown when #nav-toggle is checked */
+  #main-menu .nav-items {
+    position: absolute;
+    top: 56px;
+    left: 0;
+    right: 0;
+    background: #073763;
+    flex-direction: column;
+    gap: 0;
+    display: none;
+  }
+  #nav-toggle:checked + .menu-inner .nav-items,
+  #nav-toggle:checked ~ .menu-inner .nav-items {
+    display: flex;
+  }
+  
+  /* Dropdown på mobil */
+  .nav-dropdown {
+    width: 100%;
+  }
+  
+  .dropdown-content {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    background: rgba(11,74,131,0.15);
+    margin: 0;
+    border-radius: 0;
+    border: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  
+  .nav-dropdown:hover .dropdown-content {
+    max-height: 200px;
+  }
+  
+  .dropdown-content a {
+    border-top: 1px solid rgba(255,255,255,0.04) !important;
+    border-radius: 0 !important;
+  }
+  
+  #main-menu .nav-items a,
+  .nav-dropdown > a {
+    display: block;
+    padding: 12px 16px !important;
+    border-top: 1px solid rgba(255,255,255,0.04);
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .hamburger {
+    display: flex;
+    /* center hamburger in the navbar */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
