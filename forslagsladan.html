@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Förslagslådan - SJTK</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="forslagsladan.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav id="main-menu" role="navigation">
+        <input type="checkbox" id="nav-toggle" aria-hidden="true">
+        <div class="menu-inner">
+            <a class="brand" href="index.html">SJTK</a>
+            <label class="hamburger" for="nav-toggle" aria-label="Meny">
+                <span></span><span></span><span></span>
+            </label>
+            <div class="nav-items">
+                <a href="index.html">Hem</a>
+                <div class="nav-dropdown">
+                    <a href="#">Tävlingar</a>
+                    <div class="dropdown-content">
+                        <a href="tournamentregistration.html">Tävlingsanmälan</a>
+                        <a href="schema.html">Spelscheman</a>
+                        <a href="guidelines.html">Tävlingsanvisningar</a>
+                        <a href="calendar.html">Tävlingskalender</a>
+                    </div>
+                </div>
+                <a href="gruppspel.html">Gruppspel</a>
+                <a href="senior.html">Seniorverksamhet</a>
+                <a href="newmember.html">Ny medlem</a>
+                <a href="hallevik.html">Hällevik</a>
+                <a href="forslagsladan.html" class="active">Förslagslådan</a>
+                <a href="contact.html">Kontakt</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="forslagsladan-main">
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <div class="floating-element element-1"></div>
+            <div class="floating-element element-2"></div>
+            <div class="floating-element element-3"></div>
+            
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-icon">💡</span>
+                    <span>Dela dina idéer</span>
+                </div>
+                <h1>Förslagslådan</h1>
+                <p class="hero-subtitle">Hjälp oss att förbättra klubben med dina förslag</p>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="container">
+            <div class="suggestion-card">
+                <div class="section-image">
+                    <img src="images/forslagsladan.png" alt="Förslagslådan" class="suggestion-image">
+                </div>
+                
+                <div class="suggestion-content">
+                    <div class="intro-text">
+                        <p>Har du en idé? Vi vill gärna höra den! Om du som medlem har ett förslag på hur vi kan förbättra verksamheten, göra saker smidigare eller skapa ännu bättre upplevelser i klubben – tveka inte att dela med dig! Använd gärna vårt formulär för att skicka in dina idéer. Vi uppskattar all input som hjälper oss att utvecklas tillsammans.</p>
+                    </div>
+
+                    <!-- Suggestion Form -->
+                    <div class="suggestion-form-section">
+                        <h3>Skicka ditt förslag</h3>
+                        <form id="suggestion-form" class="suggestion-form">
+                            <div class="form-group">
+                                <label for="name">Namn</label>
+                                <input type="text" id="name" name="name" placeholder="Ditt fullständiga namn" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">E-post</label>
+                                <input type="email" id="email" name="email" placeholder="din.epost@exempel.se" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Rubrik</label>
+                                <input type="text" id="subject" name="subject" placeholder="Kort sammanfattning av ditt förslag" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="suggestion">Ditt förslag</label>
+                                <textarea id="suggestion" name="suggestion" rows="6" placeholder="Beskriv ditt förslag i detalj. Vad skulle förbättras och hur?" required></textarea>
+                            </div>
+
+                            <button type="submit" class="submit-button">
+                                <span class="button-icon">📨</span>
+                                Skicka
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="forslagsladan.js"></script>
+</body>
+</html>
