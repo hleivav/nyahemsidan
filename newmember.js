@@ -54,11 +54,10 @@ function initializeFormValidation() {
     
     // Handle form submission
     form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        if (validateForm()) {
-            submitForm();
+        if (!validateForm()) {
+            e.preventDefault();
         }
+        // Om validering lyckas, låt formuläret skickas normalt (till PHP)
     });
 }
 

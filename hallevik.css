@@ -1,3 +1,20 @@
+.hallevik-content textarea {
+    width: 100%;
+    min-height: 3.2em;
+    padding: 0.6em 0.9em;
+    border: 1.5px solid #bbb;
+    border-radius: 8px;
+    font-size: 1.08em;
+    margin-bottom: 0.7em;
+    background: #fff;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+    resize: vertical;
+}
+.hallevik-content textarea:focus {
+    border-color: #357abd;
+    outline: none;
+}
 /* Formulär i hallevik-card */
 .form-row {
     display: flex;
