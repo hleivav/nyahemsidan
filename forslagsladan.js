@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Form submission handler
     form.addEventListener('submit', function(e) {
-        e.preventDefault();
         
         // Get form data
         const formData = new FormData(form);
@@ -26,11 +25,10 @@ document.addEventListener('DOMContentLoaded', function() {
         showLoadingState();
         
         // Simulate form submission (replace with actual submission logic)
-        setTimeout(() => {
-            showSuccessMessage();
-            form.reset();
-            resetButtonState();
-        }, 2000);
+            setTimeout(function() {
+                alert('Tack för ditt förslag! Ditt meddelande har skickats till styrelsen.');
+            }, 100);
+            // Formuläret skickas vidare till PHP, ingen preventDefault
     });
     
     // Form validation

@@ -1,3 +1,140 @@
+/* Formulär i hallevik-card */
+.form-row {
+    display: flex;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 0.2em;
+}
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 0.6em 0.9em;
+    border: 1.5px solid #bbb;
+    border-radius: 8px;
+    font-size: 1.08em;
+    margin-bottom: 0.7em;
+    background: #fff;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+    border-color: #357abd;
+    outline: none;
+}
+.form-fieldset {
+    border: none;
+    margin: 1em 0 0.5em 0;
+    padding: 0;
+}
+.form-fieldset legend {
+    font-weight: 600;
+    margin-bottom: 0.5em;
+}
+.checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    margin-bottom: 0.3em;
+}
+.submit-btn {
+    background: #2196f3;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.9em 1.5em;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1em;
+    transition: background 0.2s;
+    width: fit-content;
+    min-width: 160px;
+    align-self: flex-start;
+}
+.submit-btn:hover {
+    background: #1769aa;
+}
+.required {
+    color: #c00;
+}
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+/* Registreringskort - anmälningsformulär */
+.registration-card {
+    background: #e3f0fb;
+    margin-top: 2.5em;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    animation: fadeInUp 0.8s ease-out;
+}
+.registration-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.registration-card label {
+    font-weight: 600;
+    margin-bottom: 0.2em;
+    display: block;
+}
+.registration-card input[type="text"],
+.registration-card input[type="email"],
+.registration-card textarea {
+    width: 100%;
+    padding: 0.6em 0.9em;
+    border: 1.5px solid #bbb;
+    border-radius: 8px;
+    font-size: 1.08em;
+    margin-bottom: 0.7em;
+    background: #fff;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+.registration-card input[type="text"]:focus,
+.registration-card input[type="email"]:focus,
+.registration-card textarea:focus {
+    border-color: #357abd;
+    outline: none;
+}
+.registration-card fieldset {
+    margin-top: 1em;
+}
+.registration-card .submit-btn {
+    background: #2196f3;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.9em 1.5em;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1em;
+    transition: background 0.2s;
+    width: fit-content;
+    min-width: 160px;
+    align-self: flex-start;
+}
+.registration-card .submit-btn:hover {
+    background: #1769aa;
+}
 /* Hällevik Page Styles */
 .hallevik-main {
     min-height: 100vh;

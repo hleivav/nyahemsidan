@@ -1,3 +1,12 @@
+.event-type.camp {
+  background: #ffda7a;
+  color: #4a3c00;
+  border-radius: 16px;
+  padding: 0.3em 1.2em;
+  font-weight: bold;
+  font-size: 1em;
+  box-shadow: 0 2px 8px rgba(255,218,122,0.15);
+}
 /* Calendar CSS - för aktivitetskalender */
 
 /* Body bakgrund */

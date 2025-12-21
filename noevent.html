@@ -3,9 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>SJTK — Klubbsida</title>
+  <title>Inga event pågår — SJTK</title>
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="noevent.css">
 </head>
 <body>
   <nav id="main-menu" role="navigation">
@@ -20,7 +21,7 @@
         <div class="nav-dropdown">
           <a href="#">Tävlingar</a>
           <div class="dropdown-content">
-            <a href="noevent.html">Tävlingsanmälan</a>
+            <a href="tournamentregistration.php">Tävlingsanmälan</a>
             <a href="schema.html">Spelscheman</a>
             <a href="guidelines.html">Tävlingsanvisningar</a>
             <a href="calendar.html">Tävlingskalender</a>
@@ -35,41 +36,17 @@
       </div>
     </div>
   </nav>
-
-  <main class="hero-section">
-    <div class="logo-container">
-      <img src="images/logga.PNG" alt="SJTK Logga" />
-    </div>
-    
-    <h1 class="main-title">
-      <span class="title-line-1">SJTK</span>
-      <span class="title-line-2">Klubbsida</span>
-    </h1>
-
-    <div class="image-gallery">
-      <div class="image-item">
-        <a href="newarrangements.html">
-          <img src="images/newarrangments.png" alt="Kommande arrangemang" />
-        </a>
-        <div class="image-text">Kommande arrangemang</div>
+  <main class="arrangements-container">
+    <div class="arrangement-card">
+      <h1 class="card-title">Inga event pågår</h1>
+      <img src="images/noactivity.png" alt="Inga event pågår just nu" class="arrangement-image" />
+      <div class="activities-list noevent-list">
+        <div class="activity-item noevent-item">
+          <span class="activity-name">Det finns inga aktuella event eller tävlingar just nu.<br>Välkommen tillbaka senare!</span>
+        </div>
       </div>
-      <div class="image-item">
-        <!-- ===== PÅGÅR-IKON: KOMMENTERA UT RADEN NEDAN FÖR ATT DÖLJA ===== -->
-        <div class="ongoing-indicator">Anmälan pågår</div>
-        <!-- ===== SLUT PÅ PÅGÅR-IKON ===== -->
-        <a href="hostbollen.html">
-          <img src="images/currentarrangement.png" alt="Tävlingar och Event" />
-        </a>
-        <div class="image-text">Tävlingar och Event</div>
-      </div>
-      <div class="image-item">
-        <a href="oldarrangements.html">
-          <img src="images/passedarrangement.png" alt="Genomförda aktiviteter" />
-        </a>
-        <div class="image-text">Genomförda aktiviteter</div>
-      </div>
+      <a href="index.html" class="back-to-home" title="Tillbaka till klubbsidan"></a>
     </div>
   </main>
-  
 </body>
 </html>

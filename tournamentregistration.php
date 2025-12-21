@@ -54,12 +54,13 @@
           $to = "wmaster@sjtk.se";
           $from = "wmaster@sjtk.se"; // Måste vara en e-post på din domän
           $subject = "Anmälan till Höstbollen 2025";
-          $message = "Namn: " . htmlspecialchars($_POST["namn"]) . "\n";
+          $message = "Följande person har anmält sig till höstbollen 2025:\n\n";
+          $message .= "Namn: " . htmlspecialchars($_POST["namn"]) . "\n";
           $message .= "E-post: " . htmlspecialchars($_POST["epost"]) . "\n";
           $message .= "Telefon: " . htmlspecialchars($_POST["telefon"]) . "\n";
           $message .= "Swishat: " . (isset($_POST["payment"]) ? "Ja" : "Nej") . "\n";
 
-          $headers = "From: $from\r\nReply-To: $from\r\n";
+          $headers = "From: $from\r\nReply-To: $from\r\nContent-Type: text/plain; charset=UTF-8\r\n";
           mail($to, $subject, $message, $headers);
           echo '<div class="thankyou-message"><h2>Tack för din anmälan!</h2><p>Vi har tagit emot din anmälan och återkommer vid behov.<br>En bekräftelse skickas till tävlingsledningen.</p><a href="index.html" class="nav-button">Tillbaka till startsidan</a></div>';
         } else {
@@ -97,6 +98,6 @@
     </div>
   </main>
 
-  <script src="navbar.js"></script>
+  
 </body>
 </html>
