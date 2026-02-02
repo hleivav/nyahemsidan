@@ -1,7 +1,7 @@
 <?php
 // Förenklad och fixerad version av reglagkm.php
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-  $to = "anmalan@sjtk.se, hleiva@hotmail.com";
+  $to = "anmalan@sjtk.se, wmaster@sjtk.se";
   $subject = '=?UTF-8?B?'.base64_encode("Anmälan Lag - SJTK").'?=';
 
   $team = trim($_POST['team_name'] ?? '');

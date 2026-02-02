@@ -1,7 +1,7 @@
 <?php
 // Copied from tournamentregistration.php and adjusted CSS link for reglagkm.css
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-  $to = "anmalan@sjtk.se, hleiva@hotmail.com";
+  $to = "anmalan@sjtk.se, wmaster@sjtk.se";
   // Encode subject as UTF-8 MIME header to preserve åäö
   $subject = '=?UTF-8?B?'.base64_encode("Anmälan Lag - SJTK").'?=';
   $team = trim($_POST['team_name'] ?? '');

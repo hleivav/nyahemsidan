@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $to = "johnnylpaulsson@msn.com";
-    $from = "hleiva@hotmail.com";
+    $from = "wmaster@sjtk.se";
     $subject = "Anmälan Hällevik 2026";
     $message = "Följande anmälan har skickats in via Hällevik-sidan på sjtk.se:\n\n";
     $message .= "Förnamn: " . htmlspecialchars($_POST["fornamn"]) . "\n";
@@ -20,7 +20,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     $message .= "\n";
 
-    $headers = "From: $from\r\nReply-To: $from\r\nContent-Type: text/plain; charset=UTF-8\r\n";
+    $replyTo = filter_var($_POST["epost"] ?? '', FILTER_SANITIZE_EMAIL);
+    $headers = "From: $from\r\nReply-To: $replyTo\r\nContent-Type: text/plain; charset=UTF-8\r\n";
     mail($to, $subject, $message, $headers);
     header("Location: tack.html");
     exit();
