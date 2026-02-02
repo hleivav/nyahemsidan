@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $to = "wmaster@sjtkl.se";
-    $from = "wmaster@sjtkl.se";
+    $to = "wmaster@sjtk.se,kassoren@sjtk.se";
+    $from = "wmaster@sjtk.se";
     $subject = "Ny medlemsansökan via hemsidan";
     $message = "Följande medlemsansökan har skickats in via newmember.html på sjtk.se:\n\n";
     $message .= "Namn: " . htmlspecialchars($_POST["fullname"] ?? '') . "\n";
@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $headers = "From: $from\r\nReply-To: $from\r\nContent-Type: text/plain; charset=UTF-8\r\n";
     mail($to, $subject, $message, $headers);
-    header("Location: tack.html");
+    header("Location: index.html");
     exit();
 } else {
     header("Location: newmember.html");

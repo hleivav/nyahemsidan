@@ -54,7 +54,9 @@ body:not([data-intro="true"]) {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  margin-right: 2.5rem; /* push nav items slightly to the right so brand appears more left */
+  margin-right: 3.5rem; /* ökat avstånd till Hem-länken */
+  position: absolute;
+  left: 16px;
 }
 
 /* Constrain the inner contents so links can be centered while brand remains visually left */
@@ -167,13 +169,15 @@ body:not([data-intro="true"]) {
 /* Dropdown-länkar */
 .dropdown-content a {
   color: #eaf3ff !important;
-  padding: 0.8rem 1rem !important;
+  padding: 0.4rem 0.6rem !important;
   text-decoration: none;
   display: block;
   transition: all 0.2s ease;
   border-radius: 0 !important;
   transform: none !important;
   box-shadow: none !important;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 .dropdown-content a:first-child {

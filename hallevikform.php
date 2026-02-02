@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $to = "johnnylpaulsson@msn.com";
-    $from = "wmaster@sjtk.se";
+    $from = "hleiva@hotmail.com";
     $subject = "Anmälan Hällevik 2026";
     $message = "Följande anmälan har skickats in via Hällevik-sidan på sjtk.se:\n\n";
     $message .= "Förnamn: " . htmlspecialchars($_POST["fornamn"]) . "\n";

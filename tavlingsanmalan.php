@@ -1,5 +1,5 @@
 <?php
-// Copied from tournamentregistration.php and adjusted CSS link for reglagkm.css
+// Copied from tournamentregistration.php
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $to = "anmalan@sjtk.se, hleiva@hotmail.com";
   // Encode subject as UTF-8 MIME header to preserve åäö
@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Anmälan Lag - SJTK</title>
-    <link rel="stylesheet" href="tournamentregistration.css">
+    <link rel="stylesheet" href="tavlingsanmalan.css">
   </head>
   <body>
     <div class="registration-container">

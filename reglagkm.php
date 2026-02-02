@@ -1,9 +1,9 @@
 <?php
-// Copied from tournamentregistration.php and adjusted CSS link for reglagkm.css
+// Förenklad och fixerad version av reglagkm.php
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $to = "anmalan@sjtk.se, hleiva@hotmail.com";
-  // Encode subject as UTF-8 MIME header to preserve åäö
   $subject = '=?UTF-8?B?'.base64_encode("Anmälan Lag - SJTK").'?=';
+
   $team = trim($_POST['team_name'] ?? '');
   $captain = trim($_POST['captain_name'] ?? '');
   $captain_email = trim($_POST['captain_email'] ?? '');
@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Anmälan Lag - SJTK</title>
-    <link rel="stylesheet" href="tournamentregistration.css">
+    <link rel="stylesheet" href="reglagkm.css">
   </head>
   <body>
     <div class="registration-container">
@@ -118,3 +118,4 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     </script>
   </body>
 </html>
+
