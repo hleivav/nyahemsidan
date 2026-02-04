@@ -1,0 +1,35 @@
+/* Lag KM 2026 CSS - based on lagkm.css with minor adjustments */
+
+body { background: linear-gradient(135deg, #073763 0%, #0B4A83 50%, #4A90C2 100%); margin:0; font-family: Arial, Helvetica, sans-serif; }
+
+.lagkm-main { min-height: calc(100vh - 64px); position: relative; }
+
+.tournament-hero { position: relative; height: 48vh; display:flex; align-items:center; justify-content:center; color:white; }
+
+.hero-background { position:absolute; inset:0; background: radial-gradient(circle at 20% 80%, rgba(255,255,255,0.06) 0%, transparent 50%); }
+
+.hero-content { text-align:center; z-index:2; }
+
+.tournament-badge { background: rgba(255,255,255,0.12); border-radius:20px; padding:0.6rem 1.2rem; display:inline-block; margin-bottom:1rem; }
+
+.hero-title { font-size:2.6rem; margin:0; }
+.title-line-2 { display:block; font-size:3.4rem; font-weight:900; }
+
+.tournament-date { margin-top:1rem; }
+.date-container { display:inline-flex; gap:1rem; background:rgba(255,255,255,0.08); padding:0.8rem 1rem; border-radius:12px; }
+
+.lagkm-container { max-width:1000px; margin:-8vh auto 2rem; padding:2rem; background:rgba(255,255,255,0.95); border-radius:16px; }
+
+.info-card { padding:1.2rem; border-radius:12px; background:linear-gradient(135deg, rgba(74,144,194,0.08), rgba(7,55,99,0.03)); }
+
+.content-section { margin-bottom:1.6rem; }
+.section-header { background:linear-gradient(135deg,#4A90C2,#073763); color:white; padding:1rem; border-radius:8px; display:flex; align-items:center; gap:0.8rem; }
+
+.highlight-box { background:#f6fafc; border-left:6px solid #2b80b8; padding:1rem; border-radius:8px; }
+
+.registration-button { background:#4A90C2; color:white; padding:0.6rem 1rem; border-radius:8px; text-decoration:none; display:inline-block; }
+
+/* Winners image shadow */
+.winner-image { display:block; max-width:800px; width:100%; margin:0.8rem auto; border-radius:8px; box-shadow: 0 28px 60px rgba(0,0,0,0.45); }
+
+@media (max-width:768px){ .hero-title{font-size:1.8rem}.title-line-2{font-size:2.4rem} .lagkm-container{margin:-6vh 1rem 1rem} }
