@@ -1,3 +1,53 @@
+/* Aktuellt evenemang - framhävning */
+.current-event {
+  background: linear-gradient(135deg, #ffe082 0%, #ffb74d 100%);
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(255, 152, 0, 0.3);
+  animation: pulse-glow 2s ease-in-out infinite;
+  position: relative;
+  margin: 1.5rem 0;
+}
+
+.current-event a {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.event-badge {
+  background: #f44336;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.3rem 0.7rem;
+  border-radius: 20px;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 8px rgba(244, 67, 54, 0.4);
+  animation: badge-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 4px 16px rgba(255, 152, 0, 0.3);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 6px 24px rgba(255, 152, 0, 0.5);
+    transform: scale(1.02);
+  }
+}
+
+@keyframes badge-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
 /* Särskild ruta för Öppna Hus-info */
 .open-house-box {
   background: #eaf3fa;

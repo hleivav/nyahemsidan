@@ -1,8 +1,3 @@
-/* Se till att brand-länken i menyn alltid är längst till vänster */
-.menu-inner { display: flex !important; align-items: center !important; flex-wrap: nowrap !important; }
-.brand { flex-shrink: 0 !important; margin-right: auto !important; }
-.nav-items { display: flex !important; align-items: center !important; flex-wrap: wrap !important; gap: 1rem !important; }
-
 /* Old Arrangements CSS - kort för genomförda aktiviteter */
 
 /* Body bakgrund för att eliminera vit ram */

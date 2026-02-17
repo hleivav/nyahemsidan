@@ -1,0 +1,424 @@
+/* Öppet Hus CSS - baserad på vardubbel.css
+   Anpassad för SJTK Öppet Hus 2026. */
+
+/* Body bakgrund */
+body {
+  background: linear-gradient(135deg, #073763 0%, #0B4A83 50%, #4A90C2 100%);
+  margin: 0;
+  min-height: 100vh;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #222;
+}
+
+/* Main container */
+.ohus-main {
+  min-height: calc(100vh - 64px);
+  background: linear-gradient(135deg, #073763 0%, #0B4A83 50%, #4A90C2 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hero Section */
+.tournament-hero {
+  position: relative;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(255,255,255,0.05) 0%, transparent 50%);
+}
+
+/* Hero Content */
+.hero-content {
+  text-align: center;
+  color: white;
+  z-index: 2;
+  position: relative;
+}
+
+.tournament-badge {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 25px;
+  padding: 0.8rem 2rem;
+  margin-bottom: 2rem;
+  display: inline-block;
+  backdrop-filter: blur(10px);
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.badge-text {
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+
+.hero-title {
+  font-size: 3.6rem;
+  font-weight: 900;
+  margin: 0 0 1.6rem 0;
+  text-shadow: 4px 4px 8px rgba(0,0,0,0.25);
+  line-height: 0.95;
+}
+
+.title-line-1 {
+  display: block;
+  font-size: 2.6rem;
+  opacity: 0.95;
+}
+
+.title-line-2 {
+  display: block;
+  font-size: 4.6rem;
+  background: linear-gradient(45deg, #ffe082, #ff9800, #f44336);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { filter: hue-rotate(0deg); }
+  50% { filter: hue-rotate(45deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.03); opacity: 1; }
+}
+
+/* Tournament Date */
+.tournament-date {
+  margin-bottom: 2rem;
+}
+
+.date-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: rgba(255,255,255,0.15);
+  padding: 1.5rem 2.5rem;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.calendar-icon {
+  font-size: 2.5rem;
+}
+
+.date-info {
+  text-align: left;
+}
+
+.date-main {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.date-day {
+  font-size: 1rem;
+  opacity: 0.95;
+  font-weight: 500;
+}
+
+/* Container */
+.ohus-container {
+  max-width: 900px;
+  margin: -80px auto 0;
+  position: relative;
+  z-index: 3;
+  padding: 0 1.5rem 4rem;
+}
+
+/* Tournament Overview (Quick Facts) */
+.tournament-overview {
+  margin-bottom: 2rem;
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.2rem;
+}
+
+.info-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.8rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.info-card h3 {
+  margin: 0 0 0.6rem 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #073763;
+}
+
+.info-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Content Sections */
+.content-section {
+  background: white;
+  border-radius: 16px;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.content-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 3px solid #073763;
+}
+
+.section-icon {
+  font-size: 2rem;
+}
+
+.section-header h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #073763;
+}
+
+.section-content {
+  color: #333;
+  line-height: 1.7;
+}
+
+/* Highlight Box */
+.highlight-box {
+  background: linear-gradient(135deg, #f0f7ff 0%, #e6f2ff 100%);
+  border-left: 5px solid #073763;
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.highlight-box p {
+  margin: 0;
+}
+
+.highlight-box strong {
+  color: #073763;
+}
+
+.welcome-message {
+  background: linear-gradient(135deg, #ffe082 0%, #ffb74d 100%);
+  border-left: 5px solid #ff9800;
+  padding: 2rem;
+}
+
+/* Öppet Hus Image */
+.ohus-image {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.ohus-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ohus-image img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+/* Rules List */
+.rules-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.rule-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.rule-item:hover {
+  background: #f0f0f0;
+}
+
+.rule-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.rule-item p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Contact Info */
+.contact-info {
+  margin-top: 1.5rem;
+}
+
+.contact-info h4 {
+  margin: 0 0 1rem 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #073763;
+}
+
+.contact-info p {
+  margin: 0.8rem 0;
+  line-height: 1.7;
+}
+
+.phone-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #073763;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.phone-link:hover {
+  color: #0B4A83;
+}
+
+.phone-icon {
+  font-size: 1.5rem;
+}
+
+/* Highlight Section */
+.highlight-section {
+  background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+  border: 2px solid #ff9800;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.8rem;
+  }
+
+  .title-line-1 {
+    font-size: 2rem;
+  }
+
+  .title-line-2 {
+    font-size: 3.5rem;
+  }
+
+  .date-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .date-info {
+    text-align: center;
+  }
+
+  .overview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .content-section {
+    padding: 1.5rem;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ohus-container {
+    margin-top: -40px;
+    padding: 0 1rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .title-line-1 {
+    font-size: 1.6rem;
+  }
+
+  .title-line-2 {
+    font-size: 2.8rem;
+  }
+
+  .tournament-badge {
+    padding: 0.6rem 1.5rem;
+  }
+
+  .badge-text {
+    font-size: 0.85rem;
+  }
+
+  .date-container {
+    padding: 1rem 1.5rem;
+  }
+
+  .date-main {
+    font-size: 1.1rem;
+  }
+
+  .date-day {
+    font-size: 0.9rem;
+  }
+}
