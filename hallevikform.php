@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $to = "johnnylpaulsson@msn.com";
+    $to = "johnnylpaulsson@msn.com, wmaster@sjtk.se";
     $from = "wmaster@sjtk.se";
     $subject = "Anmälan Hällevik 2026";
     $message = "Följande anmälan har skickats in via Hällevik-sidan på sjtk.se:\n\n";
@@ -21,7 +21,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message .= "\n";
 
     $replyTo = filter_var($_POST["epost"] ?? '', FILTER_SANITIZE_EMAIL);
-    $headers = "From: $from\r\nReply-To: $replyTo\r\nContent-Type: text/plain; charset=UTF-8\r\n";
+    $headers = "From: $from\r\n";
+    $headers .= "Reply-To: $replyTo\r\n";
+    $headers .= "MIME-Version: 1.0\r\n";
+    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+    $headers .= "Content-Transfer-Encoding: 8bit\r\n";
     mail($to, $subject, $message, $headers);
     header("Location: tack.html");
     exit();
