@@ -20,7 +20,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     $message .= "\n";
 
-    $headers = "From: $from\r\nReply-To: $from\r\nContent-Type: text/plain; charset=UTF-8\r\n";
+    $headers = "From: $from\r\n";
+    $headers .= "Reply-To: " . htmlspecialchars($_POST["email"] ?? '') . "\r\n";
+    $headers .= "MIME-Version: 1.0\r\n";
+    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+    $headers .= "Content-Transfer-Encoding: 8bit\r\n";
     mail($to, $subject, $message, $headers);
     header("Location: index.html");
     exit();
