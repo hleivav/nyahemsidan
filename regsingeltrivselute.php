@@ -1,13 +1,13 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $to = "anmalan@sjtk.se, wmaster@sjtk.se";
-  $subject = '=?UTF-8?B?'.base64_encode("Anmälan Grill-skoj med tennis och padel - SJTK").'?=';
+  $subject = '=?UTF-8?B?'.base64_encode("Anmälan Singel Ute Trivselstävling - SJTK").'?=';
   $name = trim($_POST['name'] ?? '');
   $captain_email = trim($_POST['captain_email'] ?? '');
   $captain_phone = trim($_POST['captain_phone'] ?? '');
   $swish = isset($_POST['payment']) ? 'Ja' : 'Nej';
 
-  $message = "Ny anmälan Grill-skoj med tennis och padel:\n\n";
+  $message = "Ny anmälan Singel Ute Trivselstävling:\n\n";
   $message .= "Namn: $name\n";
   $message .= "E-post: $captain_email\n";
   $message .= "Telefon: $captain_phone\n\n";
@@ -31,8 +31,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Anmälan Grill-skoj med tennis och padel - SJTK</title>
-    <link rel="stylesheet" href="tavlingsanmalan.css">
+    <title>Anmälan Singel Ute Trivselstävling - SJTK</title>
+    <link rel="stylesheet" href="regsingeltrivselute.css">
   </head>
   <body>
     <div class="registration-container">
@@ -47,12 +47,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
           <h1 class="card-title">Tävlingsanmälningar</h1>
           <p class="section-subtitle">Pågående anmälningar</p>
 
-          <img src="images/grillskoj.png" alt="Grill-skoj med tennis och padel" class="registration-image"/>
+          <img src="images/singeltrivselute.png" alt="Singel Ute Trivselstävling" class="registration-image"/>
 
-          <div class="tournament-name">Grill-skoj med tennis och padel</div>
+          <div class="tournament-name">Singel Ute Trivselstävling 2026</div>
 
           <div class="registration-form-container">
-            <h3 class="form-title">Anmälan till Grill-skoj med tennis och padel</h3>
+            <h3 class="form-title">Anmälan till Singel Ute Trivselstävling 2026</h3>
             <form method="post" action="">
               <div class="form-group">
                 <label class="form-label" for="name">Ditt namn</label>
@@ -70,7 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
               </div>
 
               <div class="form-group">
-                <p style="margin:0.4rem 0 0.8rem 0;color:#333;font-weight:600;">Pris: 150 kr</p>
+                <p style="margin:0.4rem 0 0.8rem 0;color:#333;font-weight:600;">Pris: 100 kr</p>
               </div>
 
               <div class="form-group">
@@ -87,7 +87,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         <div class="navigation-buttons">
           <a class="nav-button" href="index.html">Till startsidan</a>
-          <a class="nav-button" href="grillskoj.html">Till Grill-skoj sidan</a>
+          <a class="nav-button" href="singelutetrivsel.html">Till singel ute sidan</a>
         </div>
       </div>
     </div>

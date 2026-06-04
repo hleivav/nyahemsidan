@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Anmälan Grill-skoj med tennis och padel - SJTK</title>
-    <link rel="stylesheet" href="tavlingsanmalan.css">
+    <link rel="stylesheet" href="reggrillskoj.css">
   </head>
   <body>
     <div class="registration-container">
