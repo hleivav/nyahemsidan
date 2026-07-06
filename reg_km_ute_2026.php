@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Anmälan KM Ute 2026 - SJTK</title>
-    <link rel="stylesheet" href="tavlingsanmalan.css">
+    <link rel="stylesheet" href="reg_km_ute_2026.css">
   </head>
   <body>
     <div class="registration-container">
