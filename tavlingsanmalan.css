@@ -73,8 +73,9 @@ body {
   width: 100%;
   max-width: 400px;
   height: 300px;
-  object-fit: cover;
-  object-position: center bottom;
+  object-fit: contain;
+  object-position: center;
+  background: rgba(7, 55, 99, 0.04);
   border-radius: 12px;
   margin-bottom: 1rem;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
