@@ -16,3 +16,17 @@ body { background: linear-gradient(135deg, #073763 0%, #0B4A83 50%, #4A90C2 100%
 }
 
 @media (max-width:768px){ .lagkm-container{margin:-6vh 1rem 1rem} .winner-image{max-width:100%} }
+
+.registration-button {
+	background:#4A90C2;
+	color:white;
+	padding:0.6rem 1rem;
+	border-radius:8px;
+	text-decoration:none;
+	display:inline-block;
+	font-weight:700;
+	transition:background 0.2s;
+}
+.registration-button:hover {
+	background:#073763;
+}
