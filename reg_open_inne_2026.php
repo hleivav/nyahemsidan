@@ -79,7 +79,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Anmälan SJTK Open Inne 2026</title>
-    <link rel="stylesheet" href="tavlingsanmalan.css">
+    <link rel="stylesheet" href="reg_open_inne_2026.css">
   </head>
   <body>
     <div class="registration-container">
