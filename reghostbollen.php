@@ -20,7 +20,7 @@
         <div class="nav-dropdown">
           <a href="#">Tävlingar</a>
           <div class="dropdown-content">
-            <a href="tournamentregistration.php">Tävlingsanmälan</a>
+            <a href="tavlingsanmalan.php">Tävlingsanmälan</a>
             <a href="schema.html">Spelscheman</a>
             <a href="guidelines.html">Tävlingsanvisningar</a>
             <a href="calendar.html">Tävlingskalender</a>
@@ -48,14 +48,14 @@
       <div class="tournament-name">Höstbollen</div>
       
       <div class="registration-form-container" id="formContainer">
-        <h3 class="form-title">Anmälan till Höstbollen 2025</h3>
+        <h3 class="form-title">Anmälan till Höstbollen 2026</h3>
         <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
           // Byt ut till en e-postadress på din domän, t.ex. info@sjtk.se
           $to = "wmaster@sjtk.se";
           $from = "wmaster@sjtk.se"; // Måste vara en e-post på din domän
-          $subject = "Anmälan till Höstbollen 2025";
-          $message = "Följande person har anmält sig till höstbollen 2025:\n\n";
+          $subject = "Anmälan till Höstbollen 2026";
+          $message = "Följande person har anmält sig till höstbollen 2026:\n\n";
           $message .= "Namn: " . htmlspecialchars($_POST["namn"]) . "\n";
           $message .= "E-post: " . htmlspecialchars($_POST["epost"]) . "\n";
           $message .= "Telefon: " . htmlspecialchars($_POST["telefon"]) . "\n";
@@ -80,7 +80,7 @@
             <input type="tel" id="phone" name="telefon" class="form-input" required>
           </div>
           <div class="form-group">
-            <label class="form-label">Pris: 200 kr</label>
+            <label class="form-label">Pris: 230 kr</label>
             <div class="checkbox-group">
               <input type="checkbox" id="payment" name="payment" class="form-checkbox" required>
               <label for="payment" class="checkbox-label">Jag har swishat summan ovan till SWISH-nummer 1230571562</label>
